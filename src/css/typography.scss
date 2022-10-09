@@ -28,3 +28,9 @@ a {
 } a:hover {
     text-decoration: underline;
 }
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--lighter);
+}

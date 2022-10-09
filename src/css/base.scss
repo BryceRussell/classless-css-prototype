@@ -1,0 +1,37 @@
+:root {
+    height: 100%;
+
+    --primary: #0072ed;
+    --lighter: #f5f5f5;
+    --light: #ccc;
+    --dark: #333;
+    --darker: #222;
+    
+    --fluid-0: clamp(0.88rem, 0.2vw + 0.84rem, 1rem);
+    --fluid-1: clamp(1rem, 0.2vw + 0.96rem, 1.13rem);
+    --fluid-2: clamp(1.1rem, 0.41vw + 1.02rem, 1.35rem);
+    --fluid-3: clamp(1.21rem, 0.67vw + 1.08rem, 1.62rem);
+    --fluid-4: clamp(1.33rem, 1vw + 1.14rem, 1.94rem);
+    --fluid-5: clamp(1.46rem, 1.42vw + 1.2rem, 2.33rem);
+    --fluid-6: clamp(1.61rem, 1.94vw + 1.25rem, 2.8rem);
+    --fluid-7: clamp(1.77rem, 2.59vw + 1.29rem, 3.36rem);
+    --fluid-8: clamp(1.95rem, 3.4vw + 1.31rem, 4.03rem);
+    --fluid-9: clamp(2.14rem, 4.4vw + 1.32rem, 4.84rem);
+} body {
+    height: 100%;
+    font-family: "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    font-size: var(--fluid-1);
+    color: var(--dark);
+} main {
+    min-height: 100%;
+}
+
+/* Layouts */
+
+body[center],
+main[center] {
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 1em;
+}

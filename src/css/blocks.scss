@@ -1,0 +1,14 @@
+blockquote {
+    margin: .5em 0 .5em 2em;
+    padding: .5em 1em;
+    border-left: 3px solid var(--primary);
+} * :not(pre) > code {
+    padding: 2px 4px;
+    vertical-align: text-bottom;
+    background-color: var(--lighter);
+    border-bottom: 1px solid var(--light);
+} pre {
+    overflow-x: auto;
+    padding: .5em 1em;
+    background-color: var(--lighter);
+}
