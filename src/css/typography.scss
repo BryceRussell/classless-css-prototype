@@ -1,0 +1,30 @@
+h1,h2,h3,h4,h5,h6,strong {
+    color: var(--darker);
+}
+h1 {
+    padding-bottom: .3em;
+    border-bottom: 2px solid var(--lighter);
+    font-size: var(--fluid-7);
+} h2 {
+    padding-bottom: .3em;
+    border-bottom: 2px solid var(--lighter);
+    font-size: var(--fluid-6);
+} h3 {
+    font-size: var(--fluid-5);
+} h4 {
+    font-size: var(--fluid-4);
+} h5 {
+    font-size: var(--fluid-3);
+} h6 {
+    font-size: var(--fluid-2);
+}
+::selection {
+    background-color: var(--primary);
+    color: #fff;
+}
+a {
+    text-decoration: none;
+    color: var(--primary);
+} a:hover {
+    text-decoration: underline;
+}
