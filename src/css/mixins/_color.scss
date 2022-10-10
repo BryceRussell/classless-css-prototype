@@ -1,0 +1,9 @@
+@use "sass:color";
+@use "sass:math";
+
+@mixin palette($name, $base, $property, $scale) {
+    $f: math.round(math.div(100, $scale));
+    @for $i from 1 through $scale {
+        --#{$name}-#{$i}: #{color.scale($base, $lightness: math.percentage(math.div(math.min($f * $i, 99), 100)))};
+    }
+}
