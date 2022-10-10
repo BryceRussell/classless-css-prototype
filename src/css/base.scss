@@ -1,16 +1,17 @@
 @use 'mixins/color';
 
-$color-primary: hsl(211, 68%, 45%);
-$color-secondary: hsl(9, 77%, 48%);
-$gray: #000;
+$color-primary: #2570c1;
+$color-secondary: #d9381c;
+$gray-base: #000;
 
 :root {
     height: 100%;
 
     --primary: #{$color-primary};
+    @include color.palette('primary', $color-primary, $dark: 4, $light: 4, $alpha: 4);
     --secondary: #{$color-secondary};
-    --gray: #{$gray};
-    @include color.palette('gray', $gray, '$lighten', 10);
+    --gray: #{$gray-base};
+    @include color.palette('gray', $gray-base, $light: 10, $alpha: 4);
     
     --fluid-0: clamp(0.88rem, 0.2vw + 0.84rem, 1rem);
     --fluid-1: clamp(1rem, 0.2vw + 0.96rem, 1.13rem);

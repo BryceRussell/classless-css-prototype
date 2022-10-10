@@ -1,9 +1,23 @@
-@use "sass:color";
+@use "sass:meta";
 @use "sass:math";
+@use "sass:string";
+@use "sass:color";
 
-@mixin palette($name, $base, $property, $scale) {
-    $f: math.round(math.div(100, $scale));
-    @for $i from 1 through $scale {
-        --#{$name}-#{$i}: #{color.scale($base, $lightness: math.percentage(math.div(math.min($f * $i, 99), 100)))};
+@mixin palette( $name, $base, $args... ) {
+    // Arguments: $light, $dark, $alpha, $red, $green, $blue, $white, $saturation
+    // Ex palette('name', #000, $light: 10, $alpha: 4 )
+    @each $property, $scale in meta.keywords($args) {
+        $f: math.div(math.round(math.div(100, $scale)), 100);
+        @for $i from 1 through $scale {
+            @if $property == 'light' { --#{$name}-l#{$i}: #{color.scale($base, $lightness: math.percentage(math.min(($f * $i), .9)))}; }
+            @if $property == 'dark' { --#{$name}-d#{$i}: #{color.scale($base, $blackness: math.percentage(math.min(($f * $i), .9)))}; }
+            @if $property == 'alpha' { --#{$name}-a#{$i}: #{color.scale($base, $alpha: math.percentage(math.max((-$f * $i), -.9)))}; }
+            @if $property == 'red' { --#{$name}-r#{$i}: #{color.scale($base, $red: math.percentage(math.min(($f * $i), .9)))}; }
+            @if $property == 'green' { --#{$name}-g#{$i}: #{color.scale($base, $green: math.percentage(math.min(($f * $i), .9)))}; }
+            @if $property == 'blue' { --#{$name}-b#{$i}: #{color.scale($base, $blue: math.percentage(math.min(($f * $i), .9)))}; }
+            @if $property == 'white' { --#{$name}-w#{$i}: #{color.scale($base, $whiteness: math.percentage(math.min(($f * $i), .9)))}; }
+            @if $property == 'saturation' { --#{$name}-s#{$i}: #{color.scale($base, $saturation: math.percentage(math.min(($f * $i), .9)))}; }
+        }
     }
+
 }
