@@ -13,7 +13,7 @@ import '../css/typography.scss';
     </head>
     <body center>
       <h1>Inline Text Elements</h1>
-      <div style="display: grid;">
+      <div class="text-grid">
         <!--  Primary Link -->
 	    <a href="#" onclick="event.preventDefault()">Primary link</a>
 
@@ -41,6 +41,15 @@ import '../css/typography.scss';
       <!-- Strikethrough -->
         <s>Strikethrough</s>
 
+      <!-- Small  -->
+      <small>Small</small>
+
+      <!-- Sub  -->
+      <p>Text<sub>Sub</sub></p>
+
+      <!-- Sup  -->
+      <p>Text<sup>Sup</sup></p>
+
       <!-- Abbreviation -->
         <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
 
@@ -54,3 +63,12 @@ import '../css/typography.scss';
       
     </body>
 </html>
+
+<style>
+  .text-grid {
+    padding: 3rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 1rem;
+  }
+</style>
