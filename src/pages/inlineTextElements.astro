@@ -1,6 +1,6 @@
 ---
 import '../css/base.scss';
-import '../css/typography.scss';
+import '../css/inlineTextElements.scss';
 ---
 
 <html lang="en">
@@ -15,48 +15,48 @@ import '../css/typography.scss';
       <h1>Inline Text Elements</h1>
       <div class="text-grid">
         <!--  Primary Link -->
-	    <a href="#" onclick="event.preventDefault()">Primary link</a>
+        <a href="#" class="primary" onclick="event.preventDefault()">Primary link</a>
 
-      <!-- Secondary Link -->
-        <a href="#" class="secondary" onclick="event.preventDefault()">Secondary link</a>
+        <!-- Secondary Link -->
+          <a href="#" class="secondary" onclick="event.preventDefault()">Secondary link</a>
 
-      <!-- Contrast Link -->
-        <a href="#" class="contrast" onclick="event.preventDefault()">Contrast link</a>
+        <!-- Contrast Link -->
+          <a href="#" class="contrast" onclick="event.preventDefault()">Contrast link</a>
 
-      <!-- Bold -->
-        <strong>Bold</strong>
+        <!-- Bold -->
+          <strong>Bold</strong>
 
-      <!-- Italic -->
-        <em>Italic</em>
+        <!-- Italic -->
+          <em>Italic</em>
 
-      <!-- Underline -->
-        <u>Underline</u>
+        <!-- Underline -->
+          <u>Underline</u>
 
-      <!-- Deleted -->
-        <del>Deleted</del>
+        <!-- Deleted -->
+          <del>Deleted</del>
 
-      <!-- Inserted -->
-        <ins>Inserted</ins>
+        <!-- Inserted -->
+          <ins>Inserted</ins>
 
-      <!-- Strikethrough -->
-        <s>Strikethrough</s>
+        <!-- Strikethrough -->
+          <s>Strikethrough</s>
 
-      <!-- Small  -->
-      <small>Small</small>
+        <!-- Small  -->
+        <small>Small</small>
 
-      <!-- Sub  -->
-      <p>Text<sub>Sub</sub></p>
+        <!-- Sub  -->
+        <p>Text<sub>Sub</sub></p>
 
-      <!-- Sup  -->
-      <p>Text<sup>Sup</sup></p>
+        <!-- Sup  -->
+        <p>Text<sup>Sup</sup></p>
 
-      <!-- Abbreviation -->
-        <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
+        <!-- Abbreviation -->
+          <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
 
-      <!-- kbd -->
-        <kbd>Kbd</kbd>
+        <!-- kbd -->
+          <kbd>Kbd</kbd>
 
-      <!-- Hightlited -->
+        <!-- Hightlited -->
         <mark>Highlighted</mark>
         <!-- Comment -->
       </div>
@@ -69,6 +69,6 @@ import '../css/typography.scss';
     padding: 3rem 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 2rem 1rem;
   }
 </style>
