@@ -10,7 +10,7 @@ $gray: #000;
     --primary: #{$color-primary};
     --secondary: #{$color-secondary};
     --gray: #{$gray};
-    @include color.pallete('gray', $gray, '$lighten', 10);
+    @include color.palette('gray', $gray, '$lighten', 10);
     
     --fluid-0: clamp(0.88rem, 0.2vw + 0.84rem, 1rem);
     --fluid-1: clamp(1rem, 0.2vw + 0.96rem, 1.13rem);
