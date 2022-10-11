@@ -1,4 +1,4 @@
-@use 'mixins/color';
+@use 'mixins';
 
 $primary: #2570c1;
 $secondary: #9b25bc;
@@ -10,12 +10,12 @@ $gray: #000;
 :root {
     height: 100%;
 
-    @include color.palette('primary', $primary, $min: .05, $fraction: 0.3, $dark: 2, $light: 2, $alpha: 4);
-    @include color.palette('secondary', $secondary, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
-    @include color.palette('valid', $valid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
-    @include color.palette('warning', $warning, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
-    @include color.palette('invalid', $invalid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
-    @include color.palette('gray', $gray, $light: 16, $alpha: 4);
+    @include mixins.palette('primary', $primary, $min: .05, $fraction: 0.3, $dark: 2, $light: 2, $alpha: 4);
+    @include mixins.palette('secondary', $secondary, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    @include mixins.palette('valid', $valid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    @include mixins.palette('warning', $warning, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    @include mixins.palette('invalid', $invalid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    @include mixins.palette('gray', $gray, $light: 16, $alpha: 4);
     
     --fluid-0: clamp(0.88rem, 0.2vw + 0.84rem, 1rem);
     --fluid-1: clamp(1rem, 0.2vw + 0.96rem, 1.13rem);
