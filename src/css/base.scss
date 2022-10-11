@@ -1,17 +1,21 @@
 @use 'mixins/color';
 
-$color-primary: #2570c1;
-$color-secondary: #d9381c;
-$gray-base: #000;
+$primary: #2570c1;
+$secondary: #9b25bc;
+$valid: #44ac24;
+$warning: #e9c513;
+$invalid: #d52d1a;
+$gray: #000;
 
 :root {
     height: 100%;
 
-    --primary: #{$color-primary};
-    @include color.palette('primary', $color-primary, $dark: 4, $light: 4, $alpha: 4);
-    --secondary: #{$color-secondary};
-    --gray: #{$gray-base};
-    @include color.palette('gray', $gray-base, $light: 10, $alpha: 4);
+    @include color.palette('primary', $primary, $min: .05, $fraction: 0.3, $dark: 2, $light: 2, $alpha: 4);
+    @include color.palette('secondary', $secondary, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    @include color.palette('valid', $valid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    @include color.palette('warning', $warning, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    @include color.palette('invalid', $invalid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    @include color.palette('gray', $gray, $light: 16, $alpha: 4);
     
     --fluid-0: clamp(0.88rem, 0.2vw + 0.84rem, 1rem);
     --fluid-1: clamp(1rem, 0.2vw + 0.96rem, 1.13rem);
