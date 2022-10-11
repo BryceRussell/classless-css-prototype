@@ -1,5 +1,7 @@
-@use "sass:color";
+@use "sass:meta";
 @use "sass:math";
+@use "sass:string";
+@use "sass:color";
 
 @mixin palette( $name, $base, $min: .02, $max: 1, $fraction: null, $args... ) {
     // $name: root name of the css variable var(--#{name}-#{...})
@@ -48,4 +50,5 @@
             @if $property == 'saturation' { --#{$name}-s#{$i}: #{color.scale($base, $saturation: $v)}; }
         }
     }
+
 }
