@@ -1,12 +1,6 @@
 @use "sass:color";
 @use "sass:math";
 
-<<<<<<< Updated upstream
-@mixin pallete($name, $base, $property, $scale) {
-    $f: math.round(math.div(100, $scale));
-    @for $i from 1 through $scale {
-        --#{$name}-#{$i}: #{color.scale($base, $lightness: math.percentage(math.div(math.min($f * $i, 99), 100)))};
-=======
 @mixin palette( $name, $base, $min: .02, $max: 1, $fraction: null, $args... ) {
     // $name: root name of the css variable var(--#{name}-#{...})
     // $base: root color
@@ -53,6 +47,5 @@
             @if $property == 'white' { --#{$name}-w#{$i}: #{color.scale($base, $whiteness: $v)}; }
             @if $property == 'saturation' { --#{$name}-s#{$i}: #{color.scale($base, $saturation: $v)}; }
         }
->>>>>>> Stashed changes
     }
 }
