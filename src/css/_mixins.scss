@@ -1,0 +1,54 @@
+@use "sass:meta";
+@use "sass:math";
+@use "sass:string";
+@use "sass:color";
+
+@mixin palette( $name, $base, $min: .02, $max: 1, $fraction: null, $args... ) {
+    // $name: root name of the css variable var(--#{name}-#{...})
+    // $base: root color
+    // $min: min value of scale percentage as fraction of 1, stops color from turning completely white (.02, .05, etc)
+    // $max: max value of scale percentage as fraction of 1, stops color from turning completely black (1, .95, .75, .5, etc)
+    // $fraction: percentage as a fraction of 1 to scale the base color, default is calculated using quantity of variables
+    // $light: quanity of variable to generate, scales $lightness
+    // $dark: quanity of variable to generate, scales $blackness
+    // $alpha: quanity of variable to generate, scales $alpha
+    // $red: quanity of variable to generate, scales $red
+    // $green: quanity of variable to generate, scales $green
+    // $blue: quanity of variable to generate, scales $blue
+    // $white: quanity of variable to generate, scales $whiteness
+    // $saturation: quanity of variable to generate, scales $saturation
+    
+    // Example usage
+    // palette('primary', #1FAAFF, $min: .05, $fraction: 0.3, $dark: 2, $light: 2, $alpha: 4);
+    // palette('secondary', #990099, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    // palette('valid', #0F0, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    // palette('warning', #FF0, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    // palette('invalid', #F00, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    // palette('gray', #000, $light: 16, $alpha: 4);
+
+    //Add base color as property
+    --#{$name}: #{$base};
+    //Loop over color varieties (light, dark, alpha, etc)
+    @each $property, $quantity in meta.keywords($args) {
+        //Allows you to define your own percentage fraction(1-0) instead of calculating based off quantity of properties
+        $f: null;
+        @if $fraction { $f: $fraction }
+        @else { $f: math.div(math.round(math.div(100, $quantity)), 100); }
+        //Create x number of css variables
+        @for $i from 1 through $quantity {
+            //Calculate +,- scaling percentage for the step
+            $v: math.min(math.percentage($max), math.percentage(math.min(($f * $i), (1 - $min))));
+            $-v: math.min(math.percentage($max), math.percentage(math.max((-$f * $i), -(1 - $min))));
+            //Scale color and create css variable
+            @if $property == 'light' { --#{$name}-l#{$i}: #{color.scale($base, $lightness: $v)}; }
+            @if $property == 'dark' { --#{$name}-d#{$i}: #{color.scale($base, $blackness: $v)}; }
+            @if $property == 'alpha' { --#{$name}-a#{$i}: #{color.scale($base, $alpha: $-v)}; }
+            @if $property == 'red' { --#{$name}-r#{$i}: #{color.scale($base, $red: $v)}; }
+            @if $property == 'green' { --#{$name}-g#{$i}: #{color.scale($base, $green: $v)}; }
+            @if $property == 'blue' { --#{$name}-b#{$i}: #{color.scale($base, $blue: $v)}; }
+            @if $property == 'white' { --#{$name}-w#{$i}: #{color.scale($base, $whiteness: $v)}; }
+            @if $property == 'saturation' { --#{$name}-s#{$i}: #{color.scale($base, $saturation: $v)}; }
+        }
+    }
+
+}

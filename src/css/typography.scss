@@ -1,32 +1,41 @@
-h1,h2,h3,h4,h5,h6,strong {
-    color: var(--gray-1);
-}
 h1 {
-    padding-bottom: .3em;
-    border-bottom: 2px solid var(--gray-10);
-    font-size: var(--fluid-7);
+    padding-bottom: .25em;
+    border-bottom: 2px solid var(--gray-l16);
+    font-size: var(--h1-font-size, var(--fluid-7));
+    color: var(--h1-color, var(--gray-l3));
 } h2 {
-    padding-bottom: .3em;
-    border-bottom: 2px solid var(--gray-10);
-    font-size: var(--fluid-6);
+    padding-bottom: .25em;
+    border-bottom: 2px solid var(--gray-l16);
+    font-size: var(--h2-font-size, var(--fluid-6));
+    color: var(--h1-color, var(--gray-l4));
 } h3 {
-    font-size: var(--fluid-5);
+    font-size: var(--h3-font-size, var(--fluid-5));
+    color: var(--h1-color, var(--gray-l5));
 } h4 {
-    font-size: var(--fluid-4);
+    font-size: var(--h4-font-size, var(--fluid-4));
+    color: var(--h1-color, var(--gray-l6));
 } h5 {
-    font-size: var(--fluid-3);
+    font-size: var(--h5-font-size, var(--fluid-3));
+    color: var(--h1-color, var(--gray-l7));
 } h6 {
-    font-size: var(--fluid-2);
+    font-size: var(--h6-font-size, var(--fluid-2));
+    color: var(--h1-color, var(--gray-l8));
 }
+
 ::selection {
-    background-color: var(--primary);
+    background-color: var(--selection, var(--primary));
     color: #fff;
 }
+
 a {
     text-decoration: none;
     color: var(--primary);
 } a:hover {
     text-decoration: underline;
+}
+
+strong {
+    color: var(--gray-1);
 }
 
 hr {
