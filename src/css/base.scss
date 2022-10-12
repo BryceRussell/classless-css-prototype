@@ -1,21 +1,21 @@
-@use 'mixins/color';
+@use 'mixins';
 
-$primary: #2570c1;
-$secondary: #9b25bc;
-$valid: #44ac24;
-$warning: #e9c513;
-$invalid: #d52d1a;
+$primary: #286cdb;
+$secondary: #6a3292;
+$valid: #1fa367;
+$warning: #decd1f;
+$invalid: #ea2e0f;
 $gray: #000;
 
 :root {
     height: 100%;
 
-    @include color.palette('primary', $primary, $min: .05, $fraction: 0.3, $dark: 2, $light: 2, $alpha: 4);
-    @include color.palette('secondary', $secondary, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
-    @include color.palette('valid', $valid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
-    @include color.palette('warning', $warning, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
-    @include color.palette('invalid', $invalid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
-    @include color.palette('gray', $gray, $light: 16, $alpha: 4);
+    @include mixins.palette('primary', $primary, $min: .05, $fraction: 0.3, $dark: 2, $light: 2, $alpha: 4);
+    @include mixins.palette('secondary', $secondary, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    @include mixins.palette('valid', $valid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    @include mixins.palette('warning', $warning, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    @include mixins.palette('invalid', $invalid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
+    @include mixins.palette('gray', $gray, $light: 16, $alpha: 4);
     
     --fluid-0: clamp(0.88rem, 0.2vw + 0.84rem, 1rem);
     --fluid-1: clamp(1rem, 0.2vw + 0.96rem, 1.13rem);
@@ -29,17 +29,18 @@ $gray: #000;
     --fluid-9: clamp(2.14rem, 4.4vw + 1.32rem, 4.84rem);
 } body {
     height: 100%;
-    font-family: "Helvetica", "Arial", sans-serif;
-    line-height: 1.5;
-    font-size: var(--fluid-1);
-    color: var(--dark);
+    background: var(--background, #FFF);
+    font-family: var(--font, "Helvetica", "Arial", sans-serif);
+    line-height: var(--line-height, 1.25);
+    font-size: var(--font-size, var(--fluid-2));
+    color: var(--color, var(--gray-l2));
 } main {
     height: 100%;
 }
 
 body[center],
 main[center] {
-    max-width: 80ch;
+    max-width: var(--content-width, 80ch);
     margin: 0 auto;
-    padding: 1em;
+    padding: var(--content-padding, 1em);
 }
