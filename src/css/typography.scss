@@ -1,3 +1,5 @@
+@use 'base' as*;
+
 h1 {
     padding-bottom: .25em;
     border-bottom: 2px solid var(--gray-l16);
@@ -27,12 +29,54 @@ h1 {
     color: #fff;
 }
 
+
+// base 
 a {
     text-decoration: none;
-    color: var(--primary);
+    width: fit-content;
 } a:hover {
     text-decoration: underline;
 }
+// primary
+a.primary {
+    color: var(--primary);
+    font-size: var(--fluid-1);
+    transition: 0.4s;
+} a.primary:hover {
+    color: darken($primary, 12);
+    transition: 0.4s;
+} a.primary:focus {
+    color: darken($primary, 12);
+    background-color: lighten($primary, 50);
+} 
+// secondary
+a.secondary {
+    color: var(--gray-4);
+    font-size: var(--fluid-1);
+    text-decoration: underline;
+    transition: 0.4s;
+} a.secondary:hover {
+    color: var(--gray-2);
+    transition: 0.4s;
+} a.secondary:focus {
+    color: var(--gray-2);
+    background-color: lighten($gray, 95);
+}
+// Contrast
+a.contrast {
+    color: var(--gray-1);
+    font-size: var(--fluid-1);
+    text-decoration: underline;
+    transition: 0.4s;
+}a.contrast:hover {
+    color: darken($gray, 10);
+    transition: 0.4s;
+} a.contrast:focus {
+    color: var(--gray-2);
+    background-color: lighten($gray, 95);
+}
+
+
 
 strong {
     color: var(--gray-1);
