@@ -1,10 +1,10 @@
 @use 'mixins';
 
-$primary: #286cdb;
+$primary: #0582d2;
 $secondary: #6a3292;
-$valid: #1fa367;
-$warning: #decd1f;
-$invalid: #ea2e0f;
+$valid: #17921e;
+$warning: #ffd302;
+$invalid: #d40d12;
 $gray: #000;
 
 :root {
@@ -17,20 +17,20 @@ $gray: #000;
     @include mixins.palette('invalid', $invalid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
     @include mixins.palette('gray', $gray, $light: 16, $alpha: 4);
     
-    --fluid-0: clamp(0.88rem, 0.2vw + 0.84rem, 1rem);
-    --fluid-1: clamp(1rem, 0.2vw + 0.96rem, 1.13rem);
-    --fluid-2: clamp(1.1rem, 0.41vw + 1.02rem, 1.35rem);
-    --fluid-3: clamp(1.21rem, 0.67vw + 1.08rem, 1.62rem);
-    --fluid-4: clamp(1.33rem, 1vw + 1.14rem, 1.94rem);
-    --fluid-5: clamp(1.46rem, 1.42vw + 1.2rem, 2.33rem);
-    --fluid-6: clamp(1.61rem, 1.94vw + 1.25rem, 2.8rem);
-    --fluid-7: clamp(1.77rem, 2.59vw + 1.29rem, 3.36rem);
-    --fluid-8: clamp(1.95rem, 3.4vw + 1.31rem, 4.03rem);
-    --fluid-9: clamp(2.14rem, 4.4vw + 1.32rem, 4.84rem);
+    --fluid-0: clamp(0.8rem, 0.06vw + 0.78rem, 0.83rem);
+    --fluid-1: clamp(0.88rem, 0.19vw + 0.84rem, 1rem);
+    --fluid-2: clamp(0.96rem, 0.35vw + 0.89rem, 1.2rem);
+    --fluid-3: clamp(1.06rem, 0.56vw + 0.95rem, 1.44rem);
+    --fluid-4: clamp(1.16rem, 0.83vw + 1rem, 1.73rem);
+    --fluid-5: clamp(1.28rem, 1.17vw + 1.05rem, 2.07rem);
+    --fluid-6: clamp(1.41rem, 1.6vw + 1.09rem, 2.49rem);
+    --fluid-7: clamp(1.55rem, 2.13vw + 1.12rem, 2.99rem);
+    --fluid-8: clamp(1.71rem, 2.78vw + 1.15rem, 3.58rem);
+    --fluid-9: clamp(1.88rem, 3.59vw + 1.16rem, 4.3rem);
 } body {
     height: 100%;
     background: var(--background, #FFF);
-    font-family: var(--font, "Helvetica", "Arial", sans-serif);
+    font-family: var(--font, "Arial", sans-serif);
     line-height: var(--line-height, 1.25);
     font-size: var(--font-size, var(--fluid-2));
     color: var(--color, var(--gray-l2));
@@ -38,8 +38,8 @@ $gray: #000;
     height: 100%;
 }
 
-body[center],
-main[center] {
+body.center,
+main.center {
     max-width: var(--content-width, 80ch);
     margin: 0 auto;
     padding: var(--content-padding, 1em);
