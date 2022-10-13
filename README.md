@@ -71,23 +71,40 @@ All values are not final and subject to change
 
 #### Typography
 
+- ****: ``
+
 - **--h1-font-size**: `--fluid-7`
-- **--h1-color**: `--gray-l3`
-
 - **--h2-font-size**: `--fluid-6`
-- **--h2-color**: `--gray-l4`
-
 - **--h3-font-size**: `--fluid-5`
-- **--h3-color**: `--gray-l5`
-
 - **--h4-font-size**: `--fluid-4`
-- **--h4-color**: `--gray-l6`
-
 - **--h5-font-size**: `--fluid-3`
-- **--h5-color**: `--gray-l7`
-
 - **--h6-font-size**: `--fluid-2`
-- **--h6-color**: `--gray-l8`
+- 
+- **--h-color**: `--gray-l1`
+- **--h-border-color**: `--gray-l16` (h1/h2 border, hr)
 
-- **--selection**: `--primary`
+- **--selection-color**: `--primary`
+- **--selection-background**: `#FFF`
+
+- **--ins-color**: `--valid`
+- **--del-color**: `--invalid`
+
+- **--strong-color**: `--gray`
+- **--em-color**: `root color`
+- **--s-color**: `root color`
+- **--u-color**: `root color`
+
+- **--small-color**: `--gray-l8`
+- **--small-font-size**: `--fluid-0` (small, sub, sup, markdown footnotes)
+
+- **--footnote-color**: `(link color)`
+- **--sup-color**: `root color`
+- **--sub-color**: `root color`
+- **--sub-font-size** (sub, sup, .data-footnote-backref, [aria-describedby="footnote-label"])
+
+- **--kbd-color**: `#FFF`
+- **--kbd-background**: `--gray-l1`
+
+- **--mark-color**: `root color`
+- **--mark-background**: `--warning-a1`
 

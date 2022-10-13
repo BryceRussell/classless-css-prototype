@@ -1,34 +1,24 @@
-
+h1, h2, h3, h4, h5, h6 {
+    color: var(--h-color, var(--gray));
+}
 
 h1 {
     padding-bottom: .25em;
-    border-bottom: 2px solid var(--gray-l16);
+    border-bottom: 2px solid var(--h-border-color, var(--gray-l16));
     font-size: var(--h1-font-size, var(--fluid-7));
-    color: var(--h1-color, var(--gray-l3));
 } h2 {
     padding-bottom: .25em;
-    border-bottom: 2px solid var(--gray-l16);
+    border-bottom: 2px solid var(--h-border-color, var(--gray-l16));
     font-size: var(--h2-font-size, var(--fluid-6));
-    color: var(--h1-color, var(--gray-l4));
 } h3 {
     font-size: var(--h3-font-size, var(--fluid-5));
-    color: var(--h1-color, var(--gray-l5));
 } h4 {
     font-size: var(--h4-font-size, var(--fluid-4));
-    color: var(--h1-color, var(--gray-l6));
 } h5 {
     font-size: var(--h5-font-size, var(--fluid-3));
-    color: var(--h1-color, var(--gray-l7));
 } h6 {
     font-size: var(--h6-font-size, var(--fluid-2));
-    color: var(--h1-color, var(--gray-l8));
 }
-
-::selection {
-    background-color: var(--selection, var(--primary));
-    color: #fff;
-}
-
 // base 
 a {
     text-decoration: none;
@@ -39,11 +29,10 @@ a {
 // primary
 a.primary {
     color: var(--primary);
-    font-size: var(--fluid-1);
-    transition: 0.4s;
+    transition: .4s;
 } a.primary:hover {
     color: var(--primary-d1);
-    transition: 0.4s;
+    transition: .4s;
 } a.primary:focus {
     color: var(--primary-d1);
     background-color: var(--primary-a3);
@@ -51,168 +40,100 @@ a.primary {
 // secondary
 a.secondary {
     color: var(--gray-a2);
-    font-size: var(--fluid-1);
     text-decoration: underline;
-    transition: 0.4s;
+    transition: .4s;
 } a.secondary:hover {
     color: var(--gray-a1);
-    transition: 0.4s;
+    transition: .4s;
 } a.secondary:focus {
     color: var(--gray-a1);
     background-color: var(--gray-a4);
 }
 // Contrast
 a.contrast {
-    color: var(--gray-d1);
-    font-size: var(--fluid-1);
-    text-decoration: underline;
-    transition: 0.4s;
-}a.contrast:hover {
     color: var(--gray);
-    transition: 0.4s;
+    text-decoration: underline;
+    transition: .4s;
+} a.contrast:hover {
+    color: var(--gray-l3);
+    transition: .4s;
 } a.contrast:focus {
-    color: var(--gray-2);
+    color: var(--gray-l3);
     background-color: var(--gray-a4);
-}
-// Strong
-strong {
-    color: var(--gray-l3);
-}
-// Italic
-em {
-    color: var(--gray-l5);
-}
-// Underline
-u {
-    color: var(--gray-l3);
 }
 // Deleted
 del {
-    color: var(--invalid);
+    color: var(--del-color, var(--invalid));
 }
 // Inserted
 ins {
-    color: var(--valid);
+    color: var(--ins-color, var(--valid));
 }
+//Bold
+strong {
+    color: var(--strong-color, var(--gray));
+}
+//Italic
+em {
+    color: var(--em-color);
+}
+//Strikethrough
 s {
-    color: var(--gray-l3);
+    color: var(--s-color);
+}
+// Underline
+u {
+    color: var(--u-color);
 }
 // Small
 small {
-    color: var(--gray-l3);
-    font-size: var(--fluid-0);
+    font-size: var(--small-font-size, var(--fluid-0));
+    color: var(--small-color, var(--gray-l8));
 }
-// Sub
-sub {
-    color: var(--gray-l3);
-    font-size: var(--fluid-0);
+sub, sup, .data-footnote-backref, [aria-describedby="footnote-label"] {
+    font-size: var(--sub-font-size, var(--fluid-0));
 }
-// Sup
+// Superscript
 sup {
-    color: var(--gray-l3);
-    font-size: var(--fluid-0);
+    color: var(--sup-color);
+}
+// Subscript
+sub {
+    color: var(--sub-color);
+}
+// Markdown footnotes
+.data-footnote-backref, [aria-describedby="footnote-label"] {
+    color: var(--footnote-color, var(--primary));
 }
 // Abbreviation
 abbr {
-    color: var(--gray-l4);
     width: fit-content;
     cursor: help;
 } 
-[data-tooltip] {
-    position: relative;
-    &:before,
-    &:after {
-      opacity: 0;
-      position: absolute;
-      left: 50%;
-      backface-visibility: hidden
-    }
-    &:before {
-      border-style: solid;
-      border-top-width: 4px;
-      border-right-width: 4px;
-      border-bottom-width: 4px;
-      border-left-width: 4px;
-      border-bottom-width: 0;
-      content: '';
-      top: -2.3px;
-      width: 0;
-      height: 0;
-      transform: translate(-50%, calc(-50% - 6px));
-      transition: opacity .1s cubic-bezier(.5, .01, 0, 1) 0s, 
-        transform .6s cubic-bezier(.5, .01, 0, 1) 0s, 
-        -webkit-transform .6s cubic-bezier(.5, .01, 0, 1) 0s;
-      z-index: 110000
-    }
-    &:after {
-      content: attr(data-tooltip);
-      text-align: center;
-      padding: 10px 10px 9px;
-      font-size: 16px;
-      border-radius: 8px;
-      color: var(--gray-l16);
-      transition: opacity .3s cubic-bezier(.5, .01, 0, 1), 
-        transform .3s cubic-bezier(.5, .01, 0, 1), 
-        -webkit-transform .3s cubic-bezier(.5, .01, 0, 1);
-      pointer-events: none;
-      z-index: 999;
-      white-space: nowrap;
-      bottom: 100%;
-      transform: translate(-50%, 12px);
-      max-width: 320px;
-      text-overflow: ellipsis;
-      overflow: hidden
-    }
-}
-[data-tooltip]:after {
-background: var(--gray-l2);
-}
-[data-tooltip]:before {
-border-top-color: var(--gray);
-border-right-color: transparent;
-border-bottom-color: transparent;
-border-left-color: transparent
-}
-[data-tooltip] {
-    &:focus,
-    &:hover {
-      &:before,
-      &:after {
-        opacity: 1;
-      }
-    }
-    &:focus,
-    &:hover {
-      &:before {
-        transition: opacity .05s cubic-bezier(.5, .01, 0, .8) .1s, 
-            transform .1s cubic-bezier(.5, .01, 0, .8) .1s, 
-            -webkit-transform .1s cubic-bezier(.5, .01, 0, .8) .1s;
-            transform: translate(-50%, calc(-50% - 2px));
-      }
-      &:after {
-        transform: translate(-50%, -6px);
-     }
-   }
-}
 // kbd(keyboard input)
 kbd {
     width: fit-content;
-    color: var(--gray-l16);
-    background-color: var(--gray-l3);
-    border-radius: .3rem;
-    padding: .25rem .5rem;
+    color: var(--kbd-color, #FFF);
+    background-color: var(--kbd-background, var(--gray-l1));
+    border-radius: 5px;
+    padding: .25em .5em;
 }
 //Highlited
 mark {
     width: fit-content;
-    background-color: var(--warning-a1);
-    color: var(--warning-d1);
+    background-color: var(--mark-background, var(--warning-a1));
+    color: var(--mark-color);
     vertical-align: baseline;
-    padding: .125rem .25rem;
+    padding: .125em .25em;
 }
-  
+// Text selection
+::selection {
+    background: var(--selection-background, var(--primary));
+    color: var(--selection-color, #FFF);
+}
+// Page break/line  
 hr {
     border: none;
     height: 2px;
-    background-color: var(--gray-10);
+    background-color: var(--h-border-color, var(--gray-l16));
 }

@@ -2,20 +2,20 @@
 layout: ~/layouts/Base.astro
 ---
 
-# Center Attribute
+# Center Class
 
-Use on the body element to center navbar, main, and footer
+Use on the `<body>` element to center everything (navbar, main, and footer)
 
 or
 
-Use on the main element to avoid centering navbar and footer
+Use on the `<main>` element to only center content
 
-```html
-<body center>
+```
+<body class="center">
     ...
 </body>
 
-<main center>
+<main class="center">
     ...
 </main>
 ```
