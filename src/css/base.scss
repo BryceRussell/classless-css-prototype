@@ -29,6 +29,7 @@ $gray: #000;
     --fluid-9: clamp(1.88rem, 3.59vw + 1.16rem, 4.3rem);
 } body {
     height: 100%;
+    margin: 0;
     font-family: sans-serif;
     line-height: 1.25;
     font-size: var(--fluid-2);
