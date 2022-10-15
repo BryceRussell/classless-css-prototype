@@ -10,7 +10,7 @@ $gray: #000;
 :root {
     height: 100%;
 
-    @include mixins.palette('primary', $primary, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 1);
+    @include mixins.palette('primary', $primary, $min: .25, $max: .3, $dark: 1, $light: 1, $alpha: 1);
     @include mixins.palette('valid', $valid, $min: .25, $alpha: 1);
     @include mixins.palette('warning', $warning, $min: .25, $alpha: 1);
     @include mixins.palette('invalid', $invalid, $min: .25, $alpha: 1);

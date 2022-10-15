@@ -14,33 +14,33 @@ All values are not final and subject to change
 
 #### Colors:
 
-- **--primary: #0582d2**;**
-- **--primary-d1: #054269**;**
-- **--primary-l1: #6fc5fc**;**
-- **--primary-a1: rgba(5, 130, 210, 0.25)**;**
-- **--valid: #17921e**;**
-- **--valid-a1: rgba(23, 146, 30, 0.25)**;**
-- **--warning: #ffd302**;**
-- **--warning-a1: rgba(255, 211, 2, 0.25)**;**
-- **--invalid: #d40d12**;**
-- **--invalid-a1: rgba(212, 13, 18, 0.25)**;**
-- **--gray: #000**;**
-- **--gray-l1: #141414**;**
-- **--gray-l2: #292929**;**
-- **--gray-l3: #3d3d3d**;**
-- **--gray-l4: #525252**;**
-- **--gray-l5: #666666**;**
-- **--gray-l6: #7a7a7a**;**
-- **--gray-l7: #8f8f8f**;**
-- **--gray-l8: #a3a3a3**;**
-- **--gray-l9: #b8b8b8**;**
-- **--gray-l10: #cccccc**;**
-- **--gray-l11: #e0e0e0**;**
-- **--gray-l12: whitesmoke**;**
-- **--gray-a1: rgba(0, 0, 0, 0.75)**;**
-- **--gray-a2: rgba(0, 0, 0, 0.5)**;**
-- **--gray-a3: rgba(0, 0, 0, 0.25)**;**
-- **--gray-a4: rgba(0, 0, 0, 0.1)**;**
+- **--primary: `#0582d2`**
+- **--primary-d1: `#054269`**
+- **--primary-l1: `#6fc5fc`**
+- **--primary-a1: `rgba(5, 130, 210, 0.25)`**
+- **--valid: `#17921e`**
+- **--valid-a1: `rgba(23, 146, 30, 0.25)`**
+- **--warning: `#ffd302`**
+- **--warning-a1: `rgba(255, 211, 2, 0.25)`**
+- **--invalid: `#d40d12`**
+- **--invalid-a1: `rgba(212, 13, 18, 0.25)`**
+- **--gray: `#000`**
+- **--gray-l1: `#141414`**
+- **--gray-l2: `#292929`**
+- **--gray-l3: `#3d3d3d`**
+- **--gray-l4: `#525252`**
+- **--gray-l5: `#666666`**
+- **--gray-l6: `#7a7a7a`**
+- **--gray-l7: `#8f8f8f`**
+- **--gray-l8: `#a3a3a3`**
+- **--gray-l9: `#b8b8b8`**
+- **--gray-l10: `#cccccc`**
+- **--gray-l11: `#e0e0e0`**
+- **--gray-l12: `whitesmoke`**
+- **--gray-a1: `rgba(0, 0, 0, 0.75)`**
+- **--gray-a2: `rgba(0, 0, 0, 0.5)`**
+- **--gray-a3: `rgba(0, 0, 0, 0.25)`**
+- **--gray-a4: `rgba(0, 0, 0, 0.1)`**
 
 #### Font Sizes
 
