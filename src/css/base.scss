@@ -35,10 +35,6 @@ $gray: #000;
     color: var(--gray-l2);
 } main {
     height: 100%;
-}
-
-body.center,
-main.center {
     max-width: 80ch;
     margin: 0 auto;
     padding: 1em;
