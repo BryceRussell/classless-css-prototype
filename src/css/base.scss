@@ -10,12 +10,12 @@ $gray: #000;
 :root {
     height: 100%;
 
-    @include mixins.palette('primary', $primary, $min: .05, $fraction: 0.3, $dark: 2, $light: 2, $alpha: 4);
-    @include mixins.palette('secondary', $secondary, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
-    @include mixins.palette('valid', $valid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
-    @include mixins.palette('warning', $warning, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
-    @include mixins.palette('invalid', $invalid, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 2);
-    @include mixins.palette('gray', $gray, $light: 16, $alpha: 4);
+    @include mixins.palette('primary', $primary, $min: .25, $max: .5, $dark: 1, $light: 1, $alpha: 1);
+    @include mixins.palette('valid', $valid, $min: .25, $alpha: 1);
+    @include mixins.palette('warning', $warning, $min: .25, $alpha: 1);
+    @include mixins.palette('invalid', $invalid, $min: .25, $alpha: 1);
+    @include mixins.palette('gray', $gray, $light: 12);
+    @include mixins.palette('gray', $gray, $base_property: false, $min: 0.1, $alpha: 4);
     
     --fluid-0: clamp(0.8rem, 0.06vw + 0.78rem, 0.83rem);
     --fluid-1: clamp(0.88rem, 0.19vw + 0.84rem, 1rem);
@@ -29,18 +29,17 @@ $gray: #000;
     --fluid-9: clamp(1.88rem, 3.59vw + 1.16rem, 4.3rem);
 } body {
     height: 100%;
-    background: var(--background, #FFF);
-    font-family: var(--font, "Arial", sans-serif);
-    line-height: var(--line-height, 1.25);
-    font-size: var(--font-size, var(--fluid-2));
-    color: var(--color, var(--gray-l2));
+    font-family: sans-serif;
+    line-height: 1.25;
+    font-size: var(--fluid-2);
+    color: var(--gray-l2);
 } main {
     height: 100%;
 }
 
 body.center,
 main.center {
-    max-width: var(--content-width, 80ch);
+    max-width: 80ch;
     margin: 0 auto;
-    padding: var(--content-padding, 1em);
+    padding: 1em;
 }

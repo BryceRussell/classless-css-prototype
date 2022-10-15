@@ -1,77 +1,66 @@
-h1, h2, h3, h4, h5, h6 {
-    color: var(--h-color, var(--gray));
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--gray);
 }
 
 h1 {
     padding-bottom: .25em;
-    border-bottom: 2px solid var(--h-border-color, var(--gray-l16));
-    font-size: var(--h1-font-size, var(--fluid-7));
+    border-bottom: 2px solid var(--gray-l12);
+    font-size: var(--fluid-7)
 } h2 {
     padding-bottom: .25em;
-    border-bottom: 2px solid var(--h-border-color, var(--gray-l16));
-    font-size: var(--h2-font-size, var(--fluid-6));
+    border-bottom: 2px solid var(--gray-l12);
+    font-size: var(--fluid-6)
 } h3 {
-    font-size: var(--h3-font-size, var(--fluid-5));
+    font-size: var(--fluid-5)
 } h4 {
-    font-size: var(--h4-font-size, var(--fluid-4));
+    font-size: var(--fluid-4)
 } h5 {
-    font-size: var(--h5-font-size, var(--fluid-3));
+    font-size: var(--fluid-3)
 } h6 {
-    font-size: var(--h6-font-size, var(--fluid-2));
+    font-size: var(--fluid-2)
 }
 // base 
 a {
     text-decoration: none;
     width: fit-content;
-} a:hover {
-    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:focus {
+        text-decoration: underline;
+        outline: none;
+    }
 }
 // primary
 a.primary {
     color: var(--primary);
-    transition: .4s;
 } a.primary:hover {
+    transition: .2s;
     color: var(--primary-d1);
-    transition: .4s;
-} a.primary:focus {
-    color: var(--primary-d1);
-    background-color: var(--primary-a3);
-} 
+}
 // secondary
 a.secondary {
-    color: var(--gray-a2);
     text-decoration: underline;
-    transition: .4s;
+    color: var(--gray-l7);
 } a.secondary:hover {
-    color: var(--gray-a1);
-    transition: .4s;
-} a.secondary:focus {
-    color: var(--gray-a1);
-    background-color: var(--gray-a4);
+    transition: .2s;
+    color: var(--gray-l5);
 }
 // Contrast
 a.contrast {
-    color: var(--gray);
     text-decoration: underline;
-    transition: .4s;
+    color: var(--gray);
 } a.contrast:hover {
+    transition: .2s;
     color: var(--gray-l3);
-    transition: .4s;
-} a.contrast:focus {
-    color: var(--gray-l3);
-    background-color: var(--gray-a4);
 }
 // Deleted
 del {
-    color: var(--del-color, var(--invalid));
+    color: var(--invalid);
 }
 // Inserted
 ins {
-    color: var(--ins-color, var(--valid));
-}
-//Bold
-strong {
-    color: var(--strong-color, var(--gray));
+    color: var(--valid);
 }
 //Italic
 em {
@@ -87,11 +76,11 @@ u {
 }
 // Small
 small {
-    font-size: var(--small-font-size, var(--fluid-0));
-    color: var(--small-color, var(--gray-l8));
+    color: var(--gray-l7);
+    font-size: var(--fluid-1);
 }
 sub, sup, .data-footnote-backref, [aria-describedby="footnote-label"] {
-    font-size: var(--sub-font-size, var(--fluid-0));
+    font-size: var(--fluid-0);
 }
 // Superscript
 sup {
@@ -103,7 +92,7 @@ sub {
 }
 // Markdown footnotes
 .data-footnote-backref, [aria-describedby="footnote-label"] {
-    color: var(--footnote-color, var(--primary));
+    color: var(--primary);
 }
 // Abbreviation
 abbr {
@@ -113,27 +102,25 @@ abbr {
 // kbd(keyboard input)
 kbd {
     width: fit-content;
-    color: var(--kbd-color, #FFF);
-    background-color: var(--kbd-background, var(--gray-l1));
+    color:#FFF;
+    background-color: var(--gray-l1);
     border-radius: 5px;
     padding: .25em .5em;
 }
 //Highlited
 mark {
     width: fit-content;
-    background-color: var(--mark-background, var(--warning-a1));
-    color: var(--mark-color);
+    background-color: var(--warning-a1);
     vertical-align: baseline;
     padding: .125em .25em;
 }
 // Text selection
 ::selection {
-    background: var(--selection-background, var(--primary));
-    color: var(--selection-color, #FFF);
+    background: var(--primary-a1);
 }
 // Page break/line  
 hr {
     border: none;
     height: 2px;
-    background-color: var(--h-border-color, var(--gray-l16));
+    background-color: var(--gray-l12);
 }
