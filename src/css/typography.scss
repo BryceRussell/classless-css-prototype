@@ -24,6 +24,7 @@ a {
     text-decoration: none;
     width: fit-content;
     &:hover {
+        transition: color .2s;
         text-decoration: underline;
     }
     &:focus {
@@ -35,7 +36,6 @@ a {
 a.primary {
     color: var(--primary);
 } a.primary:hover {
-    transition: .2s;
     color: var(--primary-d1);
 }
 // secondary
@@ -43,7 +43,6 @@ a.secondary {
     text-decoration: underline;
     color: var(--gray-l7);
 } a.secondary:hover {
-    transition: .2s;
     color: var(--gray-l5);
 }
 // Contrast
@@ -51,7 +50,6 @@ a.contrast {
     text-decoration: underline;
     color: var(--gray);
 } a.contrast:hover {
-    transition: .2s;
     color: var(--gray-l3);
 }
 // Deleted
