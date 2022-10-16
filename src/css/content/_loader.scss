@@ -1,0 +1,36 @@
+article {
+  margin: 0; 
+  padding: 3em 3em;
+  display: grid;
+  place-content: center;
+  box-shadow: 0.4em 0.5em 1em 0.01em var(--gray-l10);
+}
+article::before {
+  width: 1.5em;        /* the size */
+  padding: 0.25em;       /* the border thickness */
+  background: var(--gray-l9); /* the color */
+  
+  aspect-ratio: 1;
+  border-radius: 50%;
+  --_m: 
+    conic-gradient(#0000,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  box-sizing: border-box;
+  animation: load 1s linear infinite;
+  cursor: progress;
+  content: "";
+}
+
+@keyframes load {
+  to{transform: rotate(1turn)}
+}
+
+button {
+  &:hover {
+    transition: none;
+  }
+}
