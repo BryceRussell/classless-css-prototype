@@ -28,9 +28,11 @@ layout: ~/layouts/Base.astro
 
 **Typography**:
 
-Lorem, ipsum dolor sit amet consectetur [adipisicing elit](https://www.google.com). Voluptatum nostrum dicta asperiores hic porro ~~consequatur illum dolorem~~ suscipit dolores mollitia! **Voluptate, atque?** *Doloribus natus odit eius nihil tempore, sequi dignissimos*.
+Lorem, ipsum dolor sit amet consectetur [adipisicing elit](https://www.google.com). `Voluptatum nostrum dicta asperiores` hic porro ~~consequatur illum dolorem~~ suscipit dolores mollitia! **Voluptate, atque?** *Doloribus natus odit eius nihil tempore, sequi dignissimos*.
 
 [Example Link](https://www.google.com "Google's Homepage")
+
+[`Example Link`](https://www.google.com "Google's Homepage")
 
 * Unordered list can use asterisks
 - Or minuses
@@ -69,6 +71,10 @@ Quote break.
 
 **Code Blocks**:
 
+single: 
+
+`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, neque ratione. Repudiandae, laboriosam porro. Omnis, autem voluptatum? Dolores ipsa earum nisi eaque? Quis dolores quos illo necessitatibus illum perspiciatis ea?`
+
 ```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
@@ -84,6 +90,53 @@ No language indicated, so no syntax highlighting.
 ```
 
 **Tables**:
+
+<table role="grid">
+<thead>
+   <tr>
+      <th scope="col">#</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+   </tr>
+</thead>
+<tbody>
+   <tr>
+      <th scope="row">1</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+   </tr>
+   <tr>
+      <th scope="row">2</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+   </tr>
+   <tr>
+      <th scope="row">3</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+   </tr>
+</tbody>
+</table>
 
 Colons can be used to align columns.
 

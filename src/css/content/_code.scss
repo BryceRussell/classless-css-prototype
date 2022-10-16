@@ -1,0 +1,19 @@
+
+pre,
+code {
+  border-radius: 3px;
+  background-color: var(--gray-l12);
+}
+
+* :not(pre) > code {
+    padding: 2px 4px;
+    vertical-align: text-bottom;
+    background-color: var(--gray-l12);
+    border-bottom: 1px solid var(--gray-l12);
+}
+
+pre {
+    overflow-x: auto;
+    padding: .5em 1em;
+    background-color: var(--gray-l12);
+}

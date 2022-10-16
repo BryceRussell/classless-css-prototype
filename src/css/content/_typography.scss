@@ -121,17 +121,6 @@ blockquote {
     padding: .5em 1em;
     border-left: .25rem solid var(--gray-l12);
 }
-//Code
-* :not(pre) > code {
-    padding: 2px 4px;
-    vertical-align: text-bottom;
-    background-color: var(--gray-l12);
-    border-bottom: 1px solid var(--gray-l12);
-} pre {
-    overflow-x: auto;
-    padding: .5em 1em;
-    background-color: var(--gray-l12);
-}
 // Page break/line
 hr {
     border: none;
