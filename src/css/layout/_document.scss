@@ -1,0 +1,21 @@
+:root {
+    cursor: default;
+    background-color: var(--gray-l13);
+    overflow-wrap: break-word;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: sans-serif;
+    tab-size: 4;
+    line-height: 1.25;
+    font-size: var(--fluid-2);
+    color: var(--gray-l2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}

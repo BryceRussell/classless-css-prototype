@@ -19,7 +19,11 @@ h1 {
 } h6 {
     font-size: var(--fluid-2)
 }
-// base 
+// Text selection
+::selection {
+    background: var(--primary-a1);
+}
+// Link Base 
 a {
     text-decoration: none;
     width: fit-content;
@@ -100,7 +104,7 @@ abbr {
 // kbd(keyboard input)
 kbd {
     width: fit-content;
-    color:#FFF;
+    color: var(--gray-l13);
     background-color: var(--gray-l1);
     border-radius: 5px;
     padding: .25em .5em;
@@ -112,13 +116,24 @@ mark {
     vertical-align: baseline;
     padding: .125em .25em;
 }
-// Text selection
-::selection {
-    background: var(--primary-a1);
+blockquote {
+    margin: .5em 0 .5em 2em;
+    padding: .5em 1em;
+    border-left: .25rem solid var(--gray-l12);
 }
-// Page break/line  
+//Code
+* :not(pre) > code {
+    padding: 2px 4px;
+    vertical-align: text-bottom;
+    background-color: var(--gray-l12);
+    border-bottom: 1px solid var(--gray-l12);
+} pre {
+    overflow-x: auto;
+    padding: .5em 1em;
+    background-color: var(--gray-l12);
+}
+// Page break/line
 hr {
     border: none;
-    height: 2px;
-    background-color: var(--gray-l12);
+    border-bottom: 2px solid var(--gray-l12);
 }

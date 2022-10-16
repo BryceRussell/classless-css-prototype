@@ -1,0 +1,8 @@
+.prose {
+    @import 'variables';
+
+    @import 'layout/document'; // Initialize page with default styles
+
+    @import 'content/typography'; // text, links, headings, blockquotes, code, ...
+    @import 'content/embed'; // audio, canvas, iframe, img, svg, video
+}
