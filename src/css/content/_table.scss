@@ -1,19 +1,40 @@
 table {
+    width: 100%;
     border-collapse: collapse;
-    border-spacing:0;
+    border-spacing: 0;
+    text-indent: 0;
 }
 
+// Header
 thead {
-    border-bottom: 3px solid var(--gray-l12);
-    padding: .3em .5em;
+    th,
+    td {
+        border-bottom: 3px solid var(--gray-l11);
+    }
 }
 
+th,
 td {
-    padding: .3em .5em;
-    border-bottom: 1px solid var(--gray-l12);
+    padding: .5em 1em;
+    border-bottom: 1px solid var(--gray-l11);
+    text-align: left;
+    text-align: start;
 }
 
+// Footer
 tfoot {
-    border-top: 3px solid var(--gray-l12);
-    padding: .3em .5em;
+    th,
+    td {
+        border-top: 3px solid var(--gray-l11);
+        border-bottom: 0;
+    }
+}
+
+// Striped
+table {
+    &[role="grid"] {
+    tbody tr:nth-child(odd) {
+        background-color: var(--gray-l12);
+    }
+    }
 }

@@ -85,6 +85,53 @@ No language indicated, so no syntax highlighting.
 
 **Tables**:
 
+<table role="grid">
+<thead>
+   <tr>
+      <th scope="col">#</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+   </tr>
+</thead>
+<tbody>
+   <tr>
+      <th scope="row">1</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+   </tr>
+   <tr>
+      <th scope="row">2</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+   </tr>
+   <tr>
+      <th scope="row">3</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+   </tr>
+</tbody>
+</table>
+
 Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
