@@ -1,0 +1,19 @@
+table {
+    border-collapse: collapse;
+    border-spacing:0;
+}
+
+thead {
+    border-bottom: 3px solid var(--gray-l12);
+    padding: .3em .5em;
+}
+
+td {
+    padding: .3em .5em;
+    border-bottom: 1px solid var(--gray-l12);
+}
+
+tfoot {
+    border-top: 3px solid var(--gray-l12);
+    padding: .3em .5em;
+}

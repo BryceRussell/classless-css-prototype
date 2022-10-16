@@ -1,41 +1,4 @@
-@use 'mixins';
+@import 'variables';
 
-$primary: #0582d2;
-$secondary: #6a3292;
-$valid: #17921e;
-$warning: #ffd302;
-$invalid: #d40d12;
-$gray: #000;
-
-:root {
-    height: 100%;
-
-    @include mixins.palette('primary', $primary, $min: .25, $max: .3, $dark: 1, $light: 1, $alpha: 1);
-    @include mixins.palette('valid', $valid, $min: .25, $alpha: 1);
-    @include mixins.palette('warning', $warning, $min: .25, $alpha: 1);
-    @include mixins.palette('invalid', $invalid, $min: .25, $alpha: 1);
-    @include mixins.palette('gray', $gray, $light: 12);
-    @include mixins.palette('gray', $gray, $base_property: false, $min: 0.1, $alpha: 4);
-    
-    --fluid-0: clamp(0.8rem, 0.06vw + 0.78rem, 0.83rem);
-    --fluid-1: clamp(0.88rem, 0.19vw + 0.84rem, 1rem);
-    --fluid-2: clamp(0.96rem, 0.35vw + 0.89rem, 1.2rem);
-    --fluid-3: clamp(1.06rem, 0.56vw + 0.95rem, 1.44rem);
-    --fluid-4: clamp(1.16rem, 0.83vw + 1rem, 1.73rem);
-    --fluid-5: clamp(1.28rem, 1.17vw + 1.05rem, 2.07rem);
-    --fluid-6: clamp(1.41rem, 1.6vw + 1.09rem, 2.49rem);
-    --fluid-7: clamp(1.55rem, 2.13vw + 1.12rem, 2.99rem);
-    --fluid-8: clamp(1.71rem, 2.78vw + 1.15rem, 3.58rem);
-    --fluid-9: clamp(1.88rem, 3.59vw + 1.16rem, 4.3rem);
-} body {
-    height: 100%;
-    font-family: sans-serif;
-    line-height: 1.25;
-    font-size: var(--fluid-2);
-    color: var(--gray-l2);
-} main {
-    height: 100%;
-    max-width: 80ch;
-    margin: 0 auto;
-    padding: 1em;
-}
+@import 'layout/document';
+@import 'layout/layout';

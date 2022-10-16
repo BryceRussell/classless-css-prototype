@@ -2,7 +2,7 @@
 @use "sass:math";
 @use "sass:color";
 
-@mixin palette( $name, $base, $min: .02, $max: 1, $fraction: null, $base_property: true, $args... ) {
+@mixin palette( $name, $base, $min: 0, $max: 1, $fraction: null, $base_property: true, $args... ) {
     // $name: root name of the css variable var(--#{name}-#{...})
     // $base: root color
     // $min: min value of scale percentage as fraction of 1, stops color from turning completely white (.02, .05, etc)

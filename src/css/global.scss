@@ -1,6 +1,12 @@
-@import 'base';
-@import 'typography';
-@import 'content';
-@import 'form';
+@import 'variables';
 
-@import 'components/tooltip';
+@import 'layout/document'; // Initialize page with default styles
+@import 'layout/layout'; // Display logic for html, body, main
+
+@import 'content/typography'; // text, links, headings, blockquotes, code, ...
+@import 'content/embed'; // audio, canvas, iframe, img, svg, video
+@import 'content/button'; // button, a[role=button], type=button, type=submit ...
+@import 'content/form'; // input, select, textarea, label, fieldset, legend
+@import 'content/table';
+
+@import 'utility/tooltip';
