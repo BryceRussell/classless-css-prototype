@@ -28,9 +28,11 @@ layout: ~/layouts/Base.astro
 
 **Typography**:
 
-Lorem, ipsum dolor sit amet consectetur [adipisicing elit](https://www.google.com). Voluptatum nostrum dicta asperiores hic porro ~~consequatur illum dolorem~~ suscipit dolores mollitia! **Voluptate, atque?** *Doloribus natus odit eius nihil tempore, sequi dignissimos*.
+Lorem, ipsum dolor sit amet consectetur [adipisicing elit](https://www.google.com). `Voluptatum nostrum dicta asperiores` hic porro ~~consequatur illum dolorem~~ suscipit dolores mollitia! **Voluptate, atque?** *Doloribus natus odit eius nihil tempore, sequi dignissimos*.
 
 [Example Link](https://www.google.com "Google's Homepage")
+
+[`Example Link`](https://www.google.com "Google's Homepage")
 
 * Unordered list can use asterisks
 - Or minuses
@@ -68,6 +70,10 @@ Quote break.
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 
 **Code Blocks**:
+
+single: 
+
+`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, neque ratione. Repudiandae, laboriosam porro. Omnis, autem voluptatum? Dolores ipsa earum nisi eaque? Quis dolores quos illo necessitatibus illum perspiciatis ea?`
 
 ```javascript
 var s = "JavaScript syntax highlighting";
