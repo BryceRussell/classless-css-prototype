@@ -1,7 +1,76 @@
-form {
-
+// Fieldset
+fieldset {
+    margin: 0 0 .5em 0;
+    padding: 0;
+    border: 0;
 }
 
-input {
+label,
+fieldset legend {
+    display: block;
+    margin-bottom: .25em;
+}
+
+// Inputs
+input,
+optgroup,
+select,
+textarea {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+input[type="color"] {
+    min-height: 2.5em;
+}
+
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
     width: 100%;
+}
+
+// Reset appearance
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]),
+select,
+textarea {
+    appearance: none;
+    padding: .5em;
+}
+// Input Styles
+input,
+select,
+textarea {
+    outline: none;
+    border: 2px solid var(--gray-l12);
+    border-radius: 3px;
+    background-color: var(--gray-l13);
+}
+// Margin bottom (Not Checkboxes and Radios)
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
+    margin-bottom: 0.25em;
+}
+// Margin top inside label
+label {
+    > :where(input, select, textarea) {
+      margin-top: .25em;
+    }
+}
+
+// Placeholder
+input::placeholder,
+input::-webkit-input-placeholder,
+textarea::placeholder,
+textarea::-webkit-input-placeholder,
+select:invalid {
+    color: var(--gray-l7);
+}
+// Helper text
+:where(input, select, textarea) {
+    + small {
+        width: 100%;
+        margin-bottom: 0.25em;
+    }
 }
