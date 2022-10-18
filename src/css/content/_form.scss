@@ -29,7 +29,6 @@ select,
 textarea {
     width: 100%;
 }
-
 // Reset appearance
 input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]),
 select,
@@ -45,6 +44,10 @@ textarea {
     border: 2px solid var(--gray-l12);
     border-radius: 3px;
     background-color: var(--gray-l13);
+}
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--primary);
 }
 // Margin bottom (Not Checkboxes and Radios)
 input:not([type="checkbox"], [type="radio"]),
