@@ -30,7 +30,7 @@ textarea {
     width: 100%;
 }
 // Reset appearance
-input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]),
+input:not([type="checkbox"], [type="radio"], [type="range"]),
 select,
 textarea {
     appearance: none;
@@ -46,7 +46,8 @@ textarea {
     background-color: var(--gray-l13);
 }
 input[type="checkbox"],
-input[type="radio"] {
+input[type="radio"],
+input[type="range"] {
     accent-color: var(--primary);
 }
 // Margin bottom (Not Checkboxes and Radios)
@@ -74,6 +75,6 @@ select:invalid {
 :where(input, select, textarea) {
     + small {
         width: 100%;
-        margin-bottom: 0.25em;
+        margin: 0 0 .25em .5em;
     }
 }
