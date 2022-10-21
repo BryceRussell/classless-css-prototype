@@ -27,34 +27,31 @@ h1 {
 a {
     text-decoration: none;
     width: fit-content;
+    color: var(--primary);
     &:hover {
-        transition: color .2s;
+        cursor: pointer;
         text-decoration: underline;
+        transition: color .2s;
+        color: var(--primary-d1);
     }
     &:focus {
         text-decoration: underline;
         outline: none;
     }
-}
-// primary
-a.primary {
-    color: var(--primary);
-} a.primary:hover {
-    color: var(--primary-d1);
-}
+} 
 // secondary
 a.secondary {
-    text-decoration: underline;
     color: var(--gray-l7);
-} a.secondary:hover {
-    color: var(--gray-l5);
+    &:hover {
+        color: var(--gray-l5);
+    }
 }
 // Contrast
 a.contrast {
-    text-decoration: underline;
     color: var(--gray);
-} a.contrast:hover {
-    color: var(--gray-l3);
+    &:hover {
+        color: var(--gray-l3);
+    }
 }
 // Deleted
 del {
