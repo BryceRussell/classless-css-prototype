@@ -2,6 +2,8 @@
 
 @import 'layout/document'; // Initialize page with default styles
 @import 'layout/layout'; // Display logic for html, body, main
+@import 'layout/grid';
+@import 'layout/container';
 
 @import 'content/typography'; // text, links, headings, blockquotes, ...
 @import 'content/code'; // code, pre
@@ -9,5 +11,7 @@
 @import 'content/button'; // button, a[role=button], type=button, type=submit ...
 @import 'content/form'; // input, select, textarea, label, fieldset, legend
 @import 'content/table';
+
+@import 'components/navbar';
 
 @import 'utility/tooltip';
