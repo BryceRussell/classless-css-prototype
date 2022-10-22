@@ -5,7 +5,8 @@ article {
   place-content: center;
   box-shadow: 0.4em 0.5em 1em 0.01em var(--gray-l10);
 }
-article::before {
+[aria-busy="true"]::before {
+  display: inline-flex;
   width: 1.5em;        /* the size */
   padding: 0.25em;       /* the border thickness */
   background: var(--gray-l9); /* the color */
@@ -29,8 +30,6 @@ article::before {
   to{transform: rotate(1turn)}
 }
 
-button {
-  &:hover {
-    transition: none;
-  }
+button[aria-busy="true"]::before {
+  background: var(--gray-l12); /* the color */
 }

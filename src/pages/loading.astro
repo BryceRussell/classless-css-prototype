@@ -2,6 +2,7 @@
 import '../css/base.scss';
 import '../css/content/_loader.scss';
 import '../css/content/_button.scss';
+import '../css/content/_code.scss'
 ---
 
 <html lang="en">
@@ -14,12 +15,16 @@ import '../css/content/_button.scss';
     </head>
     <body>
       <main>
-        <article>
-
-        </article>
-        <button>
-
-        </button>
+        <!-- general purpose loader -->
+        <article aria-busy="true"></article>
+        <!-- Button loader -->
+        <button aria-busy="true" class="loading"></button>
+        <h2>How to customize</h2>
+        <p>To change the color of the loading indicator, 
+          simply include the class or tag of the indicator within the respective element you want to change:</p>
+        <pre><code>button[aria-busy="true"]::before &#10100
+          background: var(--gray-l12); /* the color */
+          &#10101</code></pre>
       </main>
     </body>
 </html>
