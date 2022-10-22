@@ -5,7 +5,7 @@ article {
   place-content: center;
   box-shadow: 0.4em 0.5em 1em 0.01em var(--gray-l10);
 }
-article::before {
+article[aria-busy="true"]::before {
   width: 1.5em;        /* the size */
   padding: 0.25em;       /* the border thickness */
   background: var(--gray-l9); /* the color */
@@ -27,10 +27,4 @@ article::before {
 
 @keyframes load {
   to{transform: rotate(1turn)}
-}
-
-button {
-  &:hover {
-    transition: none;
-  }
 }
