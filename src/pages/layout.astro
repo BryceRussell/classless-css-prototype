@@ -1,0 +1,42 @@
+---
+import '../css/global.scss';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+    <body>
+        <header>
+            <ul>
+                <li><a class="contrast"><strong>Company</strong></a></li>
+            </ul>
+            <nav>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </nav>
+        </header>
+        <main>
+            <p><strong>Main Element</strong></p>
+            <p>The main tag is centered with a maximum width of <code>90ch</code></p>
+
+            <section style="padding:1em;background-color:lightblue;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum impedit sed architecto! Quae itaque praesentium modi necessitatibus vel eligendi alias, laborum tempora facere nostrum, in sequi quo porro ex possimus?</p>                
+            </section>
+
+            <hr>
+
+            <p><strong>Container</strong></p>
+            <p>A container is centered with a max width of <code>70ch</code></p>
+
+            <section class="container" style="background-color:lightblue;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum impedit sed architecto! Quae itaque praesentium modi necessitatibus vel eligendi alias, laborum tempora facere nostrum, in sequi quo porro ex possimus?</p>                
+            </section>
+        </main>
+    </body>
+</html>

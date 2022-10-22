@@ -1,90 +1,67 @@
+input[type="submit"],
+input[type="reset"],
 button {
-    cursor: pointer;
-    width: 100%;
-    padding: 0.75em 1em;
-    text-align: center;
-    border-radius: 3px;
-    border: none;
-    background-color: var(--primary);
-    font-size: var(--fluid-1);
-    color: #FFF;
-    &:hover {
-      transition: background-color .3s, color .3s;
-      background-color: var(--primary-d1);
-    }
-    &:active {
-      transition: transform .2s;
-      transform: scale(0.98);
-    }
-    &:focus {
-      outline: 3px solid var(--primary-a1);
-    }
+  cursor: pointer;
+  width: 100%;
+  padding: 0.75em 1em;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  background-color: var(--primary);
+  font-size: var(--fluid-2);
+  color: #FFF;
+  &:hover {
+    transition: background-color .3s, color .3s;
+    background-color: var(--primary-d1);
   }
-  // Loading button. This is set with the aria-busy="True" attribute
-  button[aria-busy="true"]::before {
-    width: 1.5em;        /* the size */
-    padding: 0.25em;       /* the border thickness */
-    background: var(--gray-l2); /* the color */
-    
-    aspect-ratio: 1;
-    border-radius: 50%;
-    --_n: 
-    conic-gradient(#0000,#000),
-    linear-gradient(#000 0 0) content-box;
-    -webkit-mask: var(--_n);
-    mask: var(--_n);
-    -webkit-mask-composite: source-out;
-    mask-composite: subtract;
-    box-sizing: border-box;
-    animation: load 1s linear infinite;
-    cursor: progress;
-    content: "";
-    
-  } @keyframes load {
-    to{transform: rotate(1turn)}
+  &:active {
+    transition: transform .2s;
+    transform: scale(0.98);
   }
-  
-  
-  button.secondary {
-    background-color: var(--gray-l7);
-    &:hover {
-      background-color: var(--gray-l6);
-    }
-    &:focus {
-      outline: 3px solid var(--gray-a3);
-    }
+  &:focus {
+    outline: 3px solid var(--primary-a1);
   }
-  
-  button.contrast {
-    background-color: var(--gray-l2);
-    &:hover {
-      background-color: var(--gray-l3);
-    }
-    &:focus {
-      outline: 3px solid var(--gray-a2);
-    }
+}
+
+button.secondary {
+  background-color: var(--gray-l7);
+  &:hover {
+    background-color: var(--gray-l6);
   }
-  
-  button.outline {
+  &:focus {
+    outline: 3px solid var(--gray-a3);
+  }
+}
+
+button.contrast {
+  background-color: var(--gray-l2);
+  &:hover {
+    background-color: var(--gray-l3);
+  }
+  &:focus {
+    outline: 3px solid var(--gray-a2);
+  }
+}
+
+button.outline {
+  background-color: transparent;
+  border: 1px solid currentColor;
+  color: var(--primary);
+  &:hover {
     background-color: transparent;
-    border: 1px solid currentColor;
-    color: var(--primary);
-    &:hover {
-      background-color: transparent;
-      color: var(--primary-d1);
-    }
+    color: var(--primary-d1);
   }
-  button.outline.secondary {
-    color: var(--gray-l6);
-    &:hover {
-      color: var(--gray-l5);
-    }
+}
+button.outline.secondary {
+  color: var(--gray-l6);
+  &:hover {
+    color: var(--gray-l5);
   }
-  button.outline.contrast {
-    color: var(--gray-l2);
-    &:hover {
-      color: var(--gray-l3);
-    }
+}
+button.outline.contrast {
+  color: var(--gray-l2);
+  &:hover {
+    color: var(--gray-l3);
   }
-  
-  
+}
+

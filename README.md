@@ -2,6 +2,18 @@
 
 Under Development
 
+## Goals
+
+- Semantic, tag focused styling
+- Low number of classes
+- Accessible, take advantage of `aria-` attributes
+- Small bundle size
+
+- Decouple styles into seperate modules, ability to pick and choose included styles
+
+- Support classless version
+- Support a `prose` class for styling markdown only
+
 ## CSS Variables
 
 This is to document and 'lock in' the property names for the project so they dont have to be renamed and replaced later on *fingers crossed*
