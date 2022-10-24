@@ -1,28 +1,18 @@
-// article {
-//   margin: 0; 
-//   padding: 3em 3em;
-//   display: grid;
-//   place-content: center;
-//   box-shadow: 0.4em 0.5em 1em 0.01em var(--gray-l10);
-// }
-
 [aria-busy="true"]:not(input, select, textarea) {
   cursor: progress;
 
   &::before {
     content: "";
     display: inline-block;
-    //vertical-align: middle;
-    //vertical-align: -.125rem;
-    width: 1.25rem;        /* the size */
-    height: 1.25rem;        /* the size */
-    padding: 0.2em;       /* the border thickness */
-    background: currentColor; /* the color */
+    width: 1.25rem; /* Size */
+    height: 1.25rem;  /* Size */
+    padding: 0.2em; /* Thickeness */
+    background: currentColor; /* Color */
     opacity: .6;
     border-radius: 50%;
     --_m: 
-      conic-gradient(#0000,#000),
-      linear-gradient(#000 0 0) content-box;
+        conic-gradient(#0000,#000),
+        linear-gradient(#000 0 0) content-box;
     -webkit-mask: var(--_m);
             mask: var(--_m);
     -webkit-mask-composite: source-out;
