@@ -1,0 +1,65 @@
+---
+import '../css/base.scss';
+import '../css/content/_button.scss';
+import '../css/content/_code.scss'
+import '../css/layout/_container.scss'
+import '../css/content/_animations.scss'
+---
+
+
+<style>
+  h1 {
+    text-align: center;
+    color: red;
+  }
+  button {
+    max-width: 100px;
+    margin-top: -15px;
+  }
+</style>
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+    </head>
+    <body>
+      <main>
+        <section class="container">
+          <h1 id="animated-content">Animated Content</h1>
+          <div style="display: grid; gap: 20px;">
+            <h4 style="margin-bottom: 0px;">Directional:</h4>
+            <button onclick="animateTop()">Top</button>
+            <button onclick="animateBottom()">Bottom</button>
+            <button onclick="animateLeft()">Left</button>
+            <button onclick="animateRight()">Right</button>
+          </div>
+        </section>
+      </main>
+    </body>
+</html>
+
+<script is:inline>
+  var element = document.getElementById('animated-content');
+
+  function animateTop() {
+    element.classList.add('animate-top');
+    element.classList.remove('animate-bottom', 'animate-left', 'animate-right')
+  }
+  function animateBottom() {
+    element.classList.add('animate-bottom');
+    element.classList.remove('animate-top', 'animate-left', 'animate-right')
+  }
+  function animateLeft() {
+    element.classList.add('animate-left');
+    element.classList.remove('animate-bottom', 'animate-top', 'animate-right')
+  }
+  function animateRight() {
+    element.classList.add('animate-right');
+    element.classList.remove('animate-bottom', 'animate-left', 'animate-top')
+  }
+</script>
