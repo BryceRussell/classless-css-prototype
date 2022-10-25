@@ -1,0 +1,48 @@
+[aria-busy="true"]:not(input, select, textarea) {
+  cursor: progress;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 1.25rem; /* Size */
+    height: 1.25rem;  /* Size */
+    padding: 0.2em; /* Thickeness */
+    background: currentColor; /* Color */
+    opacity: .6;
+    border-radius: 50%;
+    --gradient: 
+    conic-gradient(#0000,#000),
+    linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--gradient);
+            mask: var(--gradient);
+    -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+    box-sizing: border-box;
+    animation: rotate 1s linear infinite;
+  }
+
+  &:not(:empty) {
+    &::before {
+      margin-right: .25em;
+    }
+  }
+
+  &:empty {
+    text-align: center;
+  }
+}
+
+// Remove click if busy
+a,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  &[aria-busy="true"] {
+    pointer-events: none;
+  }
+}
+
+@keyframes rotate {
+  to { transform: rotate(1turn) }
+}

@@ -13,7 +13,6 @@ $gray: #000;
     @include mixins.palette('warning', $warning, $min: .25, $alpha: 1);
     @include mixins.palette('invalid', $invalid, $min: .25, $alpha: 1);
     @include mixins.palette('gray', $gray, $light: 13);
-    //@include mixins.palette('gray', #FFF, $fraction: -0.0769, $light: 13);
     @include mixins.palette('gray', $gray, $base_property: false, $min: 0.1, $alpha: 4);
     
     --fluid-0: clamp(0.8rem, 0.06vw + 0.78rem, 0.83rem);
@@ -26,4 +25,10 @@ $gray: #000;
     --fluid-7: clamp(1.55rem, 2.13vw + 1.12rem, 2.99rem);
     --fluid-8: clamp(1.71rem, 2.78vw + 1.15rem, 3.58rem);
     --fluid-9: clamp(1.88rem, 3.59vw + 1.16rem, 4.3rem);
+
+    --content-xs: 50ch;
+    --content-sm: 60ch;
+    --content-md: 70ch;
+    --content-lg: 80ch;
+    --content-xl: 90ch;
 }
