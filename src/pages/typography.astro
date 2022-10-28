@@ -1,77 +1,56 @@
 ---
-import '../css/base.scss';
-import '../css/layout/_grid.scss';
-import '../css/content/_typography.scss';
-import '../css/utility/_tooltip.scss';
+import Base from "~/layouts/Base.astro";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
-    </head>
-    <body>
-      <main>
-        <h1>Inline Text Elements</h1>
-        <div class="grid">
-          <!--  Primary Link -->
-          <a href="#" class="primary" onclick="event.preventDefault()">Primary link</a>
-  
-          <!-- Secondary Link -->
-            <a href="#" class="secondary" onclick="event.preventDefault()">Secondary link</a>
-  
-          <!-- Contrast Link -->
-            <a href="#" class="contrast" onclick="event.preventDefault()">Contrast link</a>
-  
-          <!-- Bold -->
-            <strong>Bold</strong>
-  
-          <!-- Italic -->
-            <em>Italic</em>
-  
-          <!-- Underline -->
-            <u>Underline</u>
-  
-          <!-- Deleted -->
-            <del>Deleted</del>
-  
-          <!-- Inserted -->
-            <ins>Inserted</ins>
-  
-          <!-- Strikethrough -->
-            <s>Strikethrough</s>
-  
-          <!-- Small  -->
-          <small>Small</small>
-  
-          <!-- Sub  -->
-          <p>Text<sub>Sub</sub></p>
-  
-          <!-- Sup  -->
-          <p>Text<sup>Sup</sup></p>
-  
-          <!-- Abbreviation -->
-            <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
-  
-          <!-- kbd -->
-            <kbd>Kbd</kbd>
-  
-          <!-- Hightlited -->
-          <mark>Highlighted</mark>
-          <!-- Comment -->
-        </div>
-      </main>
-    </body>
-</html>
+<Base>
+  <main>
+    <h1>Inline Text Elements</h1>
+    <div class="grid">
+      <!--  Primary Link -->
+      <a href="#" class="primary" onclick="event.preventDefault()">Primary link</a>
 
-<style>
-  .text-grid {
-    padding: 3rem 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-gap: 1.5rem 0.1rem;
-  }
-</style>
+      <!-- Secondary Link -->
+        <a href="#" class="secondary" onclick="event.preventDefault()">Secondary link</a>
+
+      <!-- Contrast Link -->
+        <a href="#" class="contrast" onclick="event.preventDefault()">Contrast link</a>
+
+      <!-- Bold -->
+        <strong>Bold</strong>
+
+      <!-- Italic -->
+        <em>Italic</em>
+
+      <!-- Underline -->
+        <u>Underline</u>
+
+      <!-- Deleted -->
+        <del>Deleted</del>
+
+      <!-- Inserted -->
+        <ins>Inserted</ins>
+
+      <!-- Strikethrough -->
+        <s>Strikethrough</s>
+
+      <!-- Small  -->
+      <small>Small</small>
+
+      <!-- Sub  -->
+      <p>Text<sub>Sub</sub></p>
+
+      <!-- Sup  -->
+      <p>Text<sup>Sup</sup></p>
+
+      <!-- Abbreviation -->
+        <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
+
+      <!-- kbd -->
+        <kbd>Kbd</kbd>
+
+      <!-- Hightlited -->
+      <mark>Highlighted</mark>
+      <!-- Comment -->
+    </div>
+  </main>
+</Base>

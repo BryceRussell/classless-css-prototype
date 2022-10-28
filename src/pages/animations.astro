@@ -1,9 +1,5 @@
 ---
-import '../css/base.scss';
-import '../css/content/_button.scss';
-import '../css/content/_code.scss'
-import '../css/layout/_container.scss'
-import '../css/content/_animations.scss'
+import Base from "~/layouts/Base.astro";
 ---
 
 
@@ -19,29 +15,20 @@ import '../css/content/_animations.scss'
 </style>
 
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
-    </head>
-    <body>
-      <main>
-        <section class="container">
-          <h1 id="animated-content">Animated Content</h1>
-          <div style="display: grid; gap: 20px;">
-            <h4 style="margin-bottom: 0px;">Directional:</h4>
-            <button onclick="animateTop()">Top</button>
-            <button onclick="animateBottom()">Bottom</button>
-            <button onclick="animateLeft()">Left</button>
-            <button onclick="animateRight()">Right</button>
-          </div>
-        </section>
-      </main>
-    </body>
-</html>
+<Base>
+  <main>
+    <section class="container">
+      <h1 id="animated-content">Animated Content</h1>
+      <div style="display: grid; gap: 20px;">
+        <h4 style="margin-bottom: 0px;">Directional:</h4>
+        <button onclick="animateTop()">Top</button>
+        <button onclick="animateBottom()">Bottom</button>
+        <button onclick="animateLeft()">Left</button>
+        <button onclick="animateRight()">Right</button>
+      </div>
+    </section>
+  </main>
+</Base>
 
 <script is:inline>
   var element = document.getElementById('animated-content');
