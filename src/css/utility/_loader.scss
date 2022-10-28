@@ -6,7 +6,7 @@
     display: inline-block;
     width: 1.25rem; /* Size */
     height: 1.25rem;  /* Size */
-    padding: 0.2em; /* Thickeness */
+    padding: 0.2rem; /* Thickeness */
     background: currentColor; /* Color */
     opacity: .6;
     border-radius: 50%;
@@ -23,7 +23,7 @@
 
   &:not(:empty) {
     &::before {
-      margin-right: .25em;
+      margin-right: .5em;
     }
   }
 

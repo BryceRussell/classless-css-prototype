@@ -11,7 +11,7 @@ button {
   border-radius: 3px;
   border: none;
   background-color: var(--primary);
-  font-size: var(--fluid-2);
+  font-size: var(--fluid-1);
   color: #FFF;
   &:hover {
     transition: background-color .3s, color .3s;
@@ -26,6 +26,7 @@ button {
   }
 }
 
+input[type="reset"],
 button.secondary {
   background-color: var(--gray-l7);
   &:hover {

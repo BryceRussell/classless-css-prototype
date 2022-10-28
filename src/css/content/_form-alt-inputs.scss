@@ -1,0 +1,30 @@
+input[type="file"] {
+    color: var(--gray-l7);
+
+    @mixin file-button {
+        padding: .5em;
+        background-color: var(--primary);
+        border: none;
+        border-radius: 3px;
+        color: var(--gray-l13);
+        font-size: var(--fluid-0);
+
+        &:active {
+            transform: scale(0.98);
+        }
+        &:active
+        &:hover,
+        &:focus {
+            transition: background-color .3s, transform .2s;
+            transform: scale(0.95);
+            background-color: var(--primary-d1);
+        }
+    }
+    &::file-selector-button {
+        @include file-button
+    } &::-webkit-file-upload-button {
+        @include file-button
+    } &::-ms-browse {
+        @include file-button
+    }
+}

@@ -24,19 +24,28 @@ input[type="color"] {
     min-height: 2.5em;
 }
 
-input:not([type="checkbox"], [type="radio"]),
-select,
-textarea {
-    width: 100%;
-}
-// Reset appearance
-input:not([type="checkbox"], [type="radio"], [type="range"]),
+// Input Styles
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="submit"], [type="reset"]),
 select,
 textarea {
     appearance: none;
     padding: .5em;
+    &:focus {
+        border-color: var(--primary);
+        outline: 2px solid var(--primary-a1);
+    }
 }
-// Input Styles
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
+    width: 100%;
+    margin-bottom: 0.25em;
+}
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+    accent-color: var(--primary);
+}
 input,
 select,
 textarea {
@@ -45,16 +54,18 @@ textarea {
     border-radius: 3px;
     background-color: var(--gray-l13);
 }
-input[type="checkbox"],
-input[type="radio"],
-input[type="range"] {
-    accent-color: var(--primary);
-}
-// Margin bottom (Not Checkboxes and Radios)
-input:not([type="checkbox"], [type="radio"]),
-select,
-textarea {
-    margin-bottom: 0.25em;
+input[aria-invalid="false"] {
+    border-color: var(--valid);
+    &:focus {
+        border-color: var(--valid);
+        outline: 3px solid var(--valid-a1);
+    }
+} input[aria-invalid="true"] {
+    border-color: var(--invalid);
+    &:focus {
+        border-color: var(--invalid);
+        outline: 3px solid var(--invalid-a1);
+    }
 }
 // Margin top inside label
 label {
