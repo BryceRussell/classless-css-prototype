@@ -1,5 +1,5 @@
 ---
-layout: ~/layouts/Base.astro
+layout: ~/layouts/Markdown.astro
 ---
 
 # h1 Heading
@@ -172,4 +172,5 @@ Asterisks
 ___
 
 Underscores
+
 

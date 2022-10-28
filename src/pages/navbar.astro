@@ -1,29 +1,20 @@
 ---
-import '../css/global.scss';
+import Base from "~/layouts/Base.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-    <body>
-        <header>
-            <ul>
-                <li><a class="contrast"><strong>Company</strong></a></li>
-            </ul>
-            <nav>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </nav>
-        </header>
-        <main>
-            <h1>Heading</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum impedit sed architecto! Quae itaque praesentium modi necessitatibus vel eligendi alias, laborum tempora facere nostrum, in sequi quo porro ex possimus?</p>                
-        </main>
-    </body>
-</html>
+<Base>
+    <header>
+        <ul>
+            <li><a class="contrast"><strong>Company</strong></a></li>
+        </ul>
+        <nav>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </nav>
+    </header>
+    <main>
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum impedit sed architecto! Quae itaque praesentium modi necessitatibus vel eligendi alias, laborum tempora facere nostrum, in sequi quo porro ex possimus?</p>                
+    </main>
+</Base>

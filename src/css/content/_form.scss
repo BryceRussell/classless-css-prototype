@@ -24,19 +24,67 @@ input[type="color"] {
     min-height: 2.5em;
 }
 
-input:not([type="checkbox"], [type="radio"]),
-select,
-textarea {
-    width: 100%;
-}
-// Reset appearance
-input:not([type="checkbox"], [type="radio"], [type="range"]),
+// Input Styles
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="submit"], [type="reset"]),
 select,
 textarea {
     appearance: none;
     padding: .5em;
+    &:focus {
+        border-color: var(--primary);
+        outline: 2px solid var(--primary-a1);
+    }
 }
-// Input Styles
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
+    width: 100%;
+    margin-bottom: 0.25em;
+}
+
+input[type="file"] {
+    color: var(--gray-l7);
+
+    @mixin file-button {
+        padding: .5em;
+        background-color: var(--primary);
+        border: none;
+        border-radius: 3px;
+        color: var(--gray-l13);
+        font-size: var(--fluid-0);
+
+        &:active {
+            transform: scale(0.98);
+        }
+        &:active
+        &:hover,
+        &:focus {
+            transition: background-color .3s, transform .2s;
+            transform: scale(0.95);
+            background-color: var(--primary-d1);
+        }
+    }
+    &::file-selector-button {
+        @include file-button
+    } &::-webkit-file-upload-button {
+        @include file-button
+    } &::-ms-browse {
+        @include file-button
+    }
+}
+input[aria-invalid="false"] {
+    border-color: var(--valid);
+    &:focus {
+        border-color: var(--valid);
+        outline: 3px solid var(--valid-a1);
+    }
+} input[aria-invalid="true"] {
+    border-color: var(--invalid);
+    &:focus {
+        border-color: var(--invalid);
+        outline: 3px solid var(--invalid-a1);
+    }
+}
 input,
 select,
 textarea {
@@ -49,12 +97,6 @@ input[type="checkbox"],
 input[type="radio"],
 input[type="range"] {
     accent-color: var(--primary);
-}
-// Margin bottom (Not Checkboxes and Radios)
-input:not([type="checkbox"], [type="radio"]),
-select,
-textarea {
-    margin-bottom: 0.25em;
 }
 // Margin top inside label
 label {
