@@ -10,7 +10,8 @@
 @import 'content/embed'; // audio, canvas, iframe, img, svg, video
 @import 'content/button'; // button, a[role=button], type=button, type=submit ...
 @import 'content/form'; // input, select, textarea, label, fieldset, legend
-@import 'content/table';
+@import 'content/form-alt-inputs'; // Alternative form inputs (file, range, radio, checkbox, switch)
+@import 'content/table'; // Table styles
 
 @import 'components/navbar';
 @import 'components/card';

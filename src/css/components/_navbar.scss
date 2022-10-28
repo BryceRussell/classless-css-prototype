@@ -1,9 +1,10 @@
-body > header {
+nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 1em;
 
-    nav, ul, ol {
+    ul, ol {
         list-style: none;
         display: flex;
         align-items: center;

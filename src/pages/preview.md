@@ -9,23 +9,6 @@ layout: ~/layouts/Markdown.astro
 ##### h5 Heading
 ###### h6 Heading
 
-<h2>Fluid Font Sizes</h2>
-
-**--fluid-0**
-<p style="font-size:var(--fluid-0);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, neque ratione. Repudiandae, laboriosam porro. Omnis, autem voluptatum? Dolores ipsa earum nisi eaque? Quis dolores quos illo necessitatibus illum perspiciatis ea?</p>   
-
-**--fluid-1**
-<p style="font-size:var(--fluid-1);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, neque ratione. Repudiandae, laboriosam porro. Omnis, autem voluptatum? Dolores ipsa earum nisi eaque? Quis dolores quos illo necessitatibus illum perspiciatis ea?</p>
-
-**--fluid-2**
-<p style="font-size:var(--fluid-2);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, neque ratione. Repudiandae, laboriosam porro. Omnis, autem voluptatum? Dolores ipsa earum nisi eaque? Quis dolores quos illo necessitatibus illum perspiciatis ea?</p>
-
-**--fluid-3**
-<p style="font-size:var(--fluid-3);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, neque ratione. Repudiandae, laboriosam porro. Omnis, autem voluptatum? Dolores ipsa earum nisi eaque? Quis dolores quos illo necessitatibus illum perspiciatis ea?</p>
-
-**--fluid-4**
-<p style="font-size:var(--fluid-4);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, neque ratione. Repudiandae, laboriosam porro. Omnis, autem voluptatum? Dolores ipsa earum nisi eaque? Quis dolores quos illo necessitatibus illum perspiciatis ea?</p>
-
 **Typography**:
 
 Lorem, ipsum dolor sit amet consectetur [adipisicing elit](https://www.google.com). `Voluptatum nostrum dicta asperiores` hic porro ~~consequatur illum dolorem~~ suscipit dolores mollitia! **Voluptate, atque?** *Doloribus natus odit eius nihil tempore, sequi dignissimos*.

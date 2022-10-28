@@ -41,36 +41,18 @@ textarea {
     width: 100%;
     margin-bottom: 0.25em;
 }
-
-input[type="file"] {
-    color: var(--gray-l7);
-
-    @mixin file-button {
-        padding: .5em;
-        background-color: var(--primary);
-        border: none;
-        border-radius: 3px;
-        color: var(--gray-l13);
-        font-size: var(--fluid-0);
-
-        &:active {
-            transform: scale(0.98);
-        }
-        &:active
-        &:hover,
-        &:focus {
-            transition: background-color .3s, transform .2s;
-            transform: scale(0.95);
-            background-color: var(--primary-d1);
-        }
-    }
-    &::file-selector-button {
-        @include file-button
-    } &::-webkit-file-upload-button {
-        @include file-button
-    } &::-ms-browse {
-        @include file-button
-    }
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+    accent-color: var(--primary);
+}
+input,
+select,
+textarea {
+    outline: none;
+    border: 2px solid var(--gray-l12);
+    border-radius: 3px;
+    background-color: var(--gray-l13);
 }
 input[aria-invalid="false"] {
     border-color: var(--valid);
@@ -84,19 +66,6 @@ input[aria-invalid="false"] {
         border-color: var(--invalid);
         outline: 3px solid var(--invalid-a1);
     }
-}
-input,
-select,
-textarea {
-    outline: none;
-    border: 2px solid var(--gray-l12);
-    border-radius: 3px;
-    background-color: var(--gray-l13);
-}
-input[type="checkbox"],
-input[type="radio"],
-input[type="range"] {
-    accent-color: var(--primary);
 }
 // Margin top inside label
 label {
