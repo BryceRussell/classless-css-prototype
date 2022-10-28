@@ -9,7 +9,7 @@ body {
 
 main {
     height: 100%;
-    max-width: 90ch;
+    max-width: var(--content-xl);
     margin: 0 auto;
     padding: 1em;
 }
