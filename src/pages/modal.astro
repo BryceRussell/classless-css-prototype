@@ -1,0 +1,43 @@
+---
+import Base from "~/layouts/Base.astro";
+---
+
+<style>
+  button {
+    max-width: 150px;
+  }
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+</style>
+
+<Base>
+  <main>
+    <div class="center">
+      <button onclick="modal.showModal()">Open Modal</button>
+      <dialog class="animate-top">
+        <h3>The Magic of the dialog tag</h3>
+        <p>You can create these awesome modals with the HTML dialog tag.</p>
+        <p>
+          Consider adding our built in anmations classes such as "animate-top"
+          to make these modals even more awesome!
+        </p>
+        <p>Note compatability does not cover all browsers.</p>
+        <p>
+          "To ensure accessibility for users of Safari versions below 15.4,
+          consider using a polyfill such as <a
+            href="https://a11y-dialog.netlify.app/">a11y-dialog</a
+          >"
+        </p>
+        <button onclick="modal.close()" class="outline">Close Modal</button>
+      </dialog>
+    </div>
+  </main>
+</Base>
+
+<script is:inline>
+  const modal = document.querySelector("dialog");
+</script>
