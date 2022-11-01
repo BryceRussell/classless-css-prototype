@@ -1,0 +1,112 @@
+---
+import Base from "~/layouts/Base.astro";
+---
+
+<Base>
+    <main>
+        <h1>Dropdowns</h1>
+        <div class="grid">
+            <div></div>
+            <div>
+                <select>
+                    <option value="" disabled selected>Select</option>
+                    <option>One</option>
+                    <option>Two</option>
+                    <option>Three</option>
+                </select>
+        
+                <details role="list">
+                    <summary aria-haspopup="listbox">Dropdown</summary>
+                    <ul role="listbox">
+                    <li><a>Action</a></li>
+                    <li><a>Another action</a></li>
+                    <li><a>Something else here</a></li>
+                    </ul>
+                </details>
+                <!-- Primary -->
+                <details role="list">
+                    <summary aria-haspopup="listbox" role="button">
+                    Dropdown as a button 1
+                    </summary>
+                    <ul role="listbox">
+                    <li><a>Action</a></li>
+                    <li><a>Another action</a></li>
+                    <li><a>Something else here</a></li>
+                    </ul>
+                </details>
+                <!-- Secondary -->
+                <details role="list">
+                    <summary aria-haspopup="listbox" role="button" class="secondary">
+                    Dropdown as a button 2
+                    </summary>
+                    <ul role="listbox">
+                    <li><a>Action</a></li>
+                    <li><a>Another action</a></li>
+                    <li><a>Something else here</a></li>
+                    </ul>
+                </details>
+                <!-- Contrast -->
+                <details role="list">
+                    <summary aria-haspopup="listbox" role="button" class="contrast">
+                    Dropdown as a button 3
+                    </summary>
+                    <ul role="listbox">
+                    <li><a>Action</a></li>
+                    <li><a>Another action</a></li>
+                    <li><a>Something else here</a></li>
+                    </ul>
+                </details>
+                <!-- With radio buttons -->
+                <details role="list">
+                    <summary aria-haspopup="listbox">Dropdown</summary>
+                    <ul role="listbox">
+                    <li>
+                        <label for="small">
+                        <input type="radio" id="small" name="size" value="small">
+                        Small
+                        </label>
+                    </li>
+                    <li>
+                        <label for="medium">
+                        <input type="radio" id="medium" name="size" value="medium">
+                        Medium
+                        </label>
+                    </li>
+                    <li>
+                        <label for="large">
+                        <input type="radio" id="large" name="size" value="large">
+                        Large
+                        </label>
+                    </li>
+                    </ul>
+                </details>
+                
+                <!-- With checkboxes -->
+                <details role="list">
+                    <summary aria-haspopup="listbox">Dropdown</summary>
+                    <ul role="listbox">
+                    <li>
+                        <label>
+                        <input type="checkbox">
+                        Banana
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                        <input type="checkbox">
+                        Watermelon
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                        <input type="checkbox">
+                        Apple
+                        </label>
+                    </li>
+                    </ul>
+                </details>
+            </div>
+            <div></div>
+        </div>
+    </main>
+</Base>

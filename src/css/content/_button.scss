@@ -1,10 +1,8 @@
 input[type="submit"],
 input[type="reset"],
+[role="button"],
 button {
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   margin-bottom: 1em;
   padding: 0.75em 1em;
@@ -27,6 +25,7 @@ button {
 }
 
 input[type="reset"],
+[role="button"].secondary,
 button.secondary {
   background-color: var(--gray-l7);
   &:hover {
@@ -36,7 +35,7 @@ button.secondary {
     outline: 3px solid var(--gray-a3);
   }
 }
-
+[role="button"].contrast,
 button.contrast {
   background-color: var(--gray-l2);
   &:hover {
