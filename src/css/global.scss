@@ -1,23 +1,23 @@
-@import "variables";
+@import 'variables';
 
-@import "layout/document"; // Initialize page with default styles
-@import "layout/layout"; // Display logic for html, body, main
-@import "layout/grid";
-@import "layout/container";
+@import 'layout/document'; // Initialize page with default styles
+@import 'layout/layout'; // Display logic for html, body, main
+@import 'layout/grid';
+@import 'layout/container';
 
-@import "content/typography"; // text, links, headings, blockquotes, ...
-@import "content/code"; // code, pre
-@import "content/embed"; // audio, canvas, iframe, img, svg, video
-@import "content/button"; // button, a[role=button], type=button, type=submit ...
-@import "content/form"; // input, select, textarea, label, fieldset, legend
-@import "content/form-alt-inputs"; // Alternative form inputs (file, range, radio, checkbox, switch)
-@import "content/table"; // Table styles
+@import 'content/typography'; // text, links, headings, blockquotes, ...
+@import 'content/code'; // code, pre
+@import 'content/embed'; // audio, canvas, iframe, img, svg, video
+@import 'content/button'; // button, a[role=button], type=button, type=submit ...
+@import 'content/form'; // input, select, textarea, label, fieldset, legend
+@import 'content/form-alt-inputs'; // Alternative form inputs (file, range, radio, checkbox, switch)
+@import 'content/table'; // Table styles
 
-@import "components/navbar";
-@import "components/card";
-@import "components/modal";
-@import "components/dropdown";
+@import 'components/navbar';
+@import 'components/card';
+@import 'components/modal';
+@import 'components/dropdown';
 
-@import "utility/animations";
-@import "utility/tooltip";
-@import "utility/loader";
+@import 'utility/animations';
+@import 'utility/tooltip';
+@import 'utility/loader';
