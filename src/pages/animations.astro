@@ -1,5 +1,5 @@
 ---
-import Base from "~/layouts/Base.astro";
+import Base from '~/layouts/Base.astro';
 ---
 
 <style>
@@ -30,66 +30,66 @@ import Base from "~/layouts/Base.astro";
 </Base>
 
 <script is:inline>
-  var element = document.getElementById("animated-content");
+  var element = document.getElementById('animated-content');
 
   function animateTop() {
-    element.classList.add("animate-top");
+    element.classList.add('animate-top');
     element.classList.remove(
-      "animate-bottom",
-      "animate-left",
-      "animate-right",
-      "animate-fade-in",
-      "animate-zoom",
+      'animate-bottom',
+      'animate-left',
+      'animate-right',
+      'animate-fade-in',
+      'animate-zoom',
     );
   }
   function animateBottom() {
-    element.classList.add("animate-bottom");
+    element.classList.add('animate-bottom');
     element.classList.remove(
-      "animate-top",
-      "animate-left",
-      "animate-right",
-      "animate-fade-in",
-      "animate-zoom",
+      'animate-top',
+      'animate-left',
+      'animate-right',
+      'animate-fade-in',
+      'animate-zoom',
     );
   }
   function animateLeft() {
-    element.classList.add("animate-left");
+    element.classList.add('animate-left');
     element.classList.remove(
-      "animate-bottom",
-      "animate-top",
-      "animate-right",
-      "animate-fade-in",
-      "animate-zoom",
+      'animate-bottom',
+      'animate-top',
+      'animate-right',
+      'animate-fade-in',
+      'animate-zoom',
     );
   }
   function animateRight() {
-    element.classList.add("animate-right");
+    element.classList.add('animate-right');
     element.classList.remove(
-      "animate-bottom",
-      "animate-left",
-      "animate-top",
-      "animate-fade-in",
-      "animate-zoom",
+      'animate-bottom',
+      'animate-left',
+      'animate-top',
+      'animate-fade-in',
+      'animate-zoom',
     );
   }
   function fadeIn() {
-    element.classList.add("animate-fade-in");
+    element.classList.add('animate-fade-in');
     element.classList.remove(
-      "animate-bottom",
-      "animate-left",
-      "animate-top",
-      "animate-right",
-      "animate-zoom",
+      'animate-bottom',
+      'animate-left',
+      'animate-top',
+      'animate-right',
+      'animate-zoom',
     );
   }
   function zoom() {
-    element.classList.add("animate-zoom");
+    element.classList.add('animate-zoom');
     element.classList.remove(
-      "animate-bottom",
-      "animate-left",
-      "animate-top",
-      "animate-right",
-      "animate-fade-in",
+      'animate-bottom',
+      'animate-left',
+      'animate-top',
+      'animate-right',
+      'animate-fade-in',
     );
   }
 </script>
