@@ -48,10 +48,7 @@ a.secondary {
 }
 // Contrast
 a.contrast {
-    color: var(--gray);
-    &:hover {
-        color: var(--gray-l3);
-    }
+    color: currentColor;
 }
 // Deleted
 del {

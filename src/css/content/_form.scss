@@ -39,13 +39,14 @@ input:not([type="checkbox"], [type="radio"]),
 select,
 textarea {
     width: 100%;
-    margin-bottom: 0.25em;
+    margin-bottom: 1em;
 }
 input[type="checkbox"],
 input[type="radio"],
 input[type="range"] {
     accent-color: var(--primary);
 }
+
 input,
 select,
 textarea {
@@ -54,13 +55,16 @@ textarea {
     border-radius: 3px;
     background-color: var(--gray-l13);
 }
+
 input[aria-invalid="false"] {
     border-color: var(--valid);
     &:focus {
         border-color: var(--valid);
         outline: 3px solid var(--valid-a1);
     }
-} input[aria-invalid="true"] {
+}
+
+input[aria-invalid="true"] {
     border-color: var(--invalid);
     &:focus {
         border-color: var(--invalid);
