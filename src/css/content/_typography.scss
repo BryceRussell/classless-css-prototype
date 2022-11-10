@@ -58,18 +58,6 @@ del {
 ins {
     color: var(--valid);
 }
-//Italic
-em {
-    color: var(--em-color);
-}
-//Strikethrough
-s {
-    color: var(--s-color);
-}
-// Underline
-u {
-    color: var(--u-color);
-}
 // Small
 small {
     color: var(--gray-l7);
@@ -77,14 +65,6 @@ small {
 }
 sub, sup, .data-footnote-backref, [aria-describedby="footnote-label"] {
     font-size: var(--fluid-0);
-}
-// Superscript
-sup {
-    color: var(--sup-color);
-}
-// Subscript
-sub {
-    color: var(--sub-color);
 }
 // Markdown footnotes
 .data-footnote-backref, [aria-describedby="footnote-label"] {
@@ -98,10 +78,10 @@ abbr {
 // kbd(keyboard input)
 kbd {
     width: fit-content;
-    color: var(--gray-l13);
-    background-color: var(--gray-l1);
-    border-radius: 5px;
     padding: .25em .5em;
+    border-radius: 5px;
+    border: 1px solid var(--gray-l11);
+    box-shadow: 1px 2px 0px 0px var(--gray-l10);
 }
 //Highlited
 mark {
