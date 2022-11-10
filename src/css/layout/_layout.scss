@@ -1,12 +1,14 @@
 body {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
     margin: 0;
 }
 
 main {
+    flex: 1 0 auto;
     height: 100%;
+    width: 100%;
     max-width: var(--content-2xl);
     margin: 0 auto;
     padding: 1em;
