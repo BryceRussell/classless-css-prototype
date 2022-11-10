@@ -9,6 +9,11 @@ details[role="list"] {
         outline: none;
         border: 2px solid var(--gray-l12);
         border-radius: 3px;
+        &.button,
+        &[role="button"] {
+            border-width: 0;
+            margin-bottom: 0;
+        }
         &:focus {
             border-color: var(--primary);
             outline: 2px solid var(--primary-a1);
@@ -22,6 +27,7 @@ details[role="list"] {
             content: "<";
             font-family: monospace;
             font-weight: bold;
+            transition: transform 200ms;
         }
     }
 
@@ -43,14 +49,13 @@ details[role="list"] {
         border-radius: 3px;
         border: 1px solid var(--gray-l8);
         background-color: var(--gray-l13);
-        color: var(--gray-l6);
 
         li {
             list-style: none;
             padding: .5em;
             a {
                 text-decoration: none;
-                color: var(--gray-l6);
+                color: currentColor;
 
             }
             &:hover {
